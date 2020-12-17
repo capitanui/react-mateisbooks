@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "CartileluiMatei's backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "dotenv": "^8.2.0",
+    "gapi": "0.0.3",
+    "googleapis": "^66.0.0"
+  }
+}
