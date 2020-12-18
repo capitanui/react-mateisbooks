@@ -1,28 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
-import "./style/card-style.css";
-import Rating from "../Rating";
+import Rating from "./Rating";
 
 const Product = ({ product }) => {
   return (
     <Card className="text-left h-100">
-      <a href={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant="top" />
-      </a>
+      </Link>
 
       <Card.Body className="d-flex flex-column text-dark">
-        <a href={`/product/${product._id}`} className="mt-auto">
+        <Link to={`/product/${product._id}`} className="mt-auto">
           <Card.Title as="div">
             <h6>{product.name}</h6>
           </Card.Title>
-        </a>
+        </Link>
 
         <Card.Text as="div">
-          <Rating value={product.rating} text={`${product.reviews} reviews`} />
+          <Rating value={product.rating} />
         </Card.Text>
 
         <Card.Text as="div">
-          <div>{product.price} Lei</div>
+          <div className="my-2 mx-2">{product.price} Lei</div>
         </Card.Text>
       </Card.Body>
     </Card>

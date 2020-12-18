@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkContainer } from "react-router-bootstrap";
 import logo from "../resources/images/banner.png";
 import {
   Navbar,
@@ -17,12 +18,17 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/" className="py-3 mr-sm-3">
-                <i className="fas fa-home mr-sm-1"></i>Home
-              </Nav.Link>
-              <Nav.Link href="/catalog" className="py-3">
-                <i className="fas fa-book-open mr-sm-1"></i>Catalog
-              </Nav.Link>
+              <LinkContainer to="/">
+                <Nav.Link className="py-3 mr-sm-3">
+                  <i className="fas fa-home mr-sm-1"></i>Home
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/catalog">
+                <Nav.Link className="py-3">
+                  <i className="fas fa-book-open mr-sm-1"></i>Catalog
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
           <Form inline>

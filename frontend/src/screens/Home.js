@@ -6,7 +6,7 @@ import Product from "../components/Product.js";
 const Catalog = () => {
   return (
     <>
-      <Container className="my-5">Catalog</Container>
+      <Container className="my-5">Home</Container>
 
       <Row className="py-2">
         {products.map((product) => (
