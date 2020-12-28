@@ -6,13 +6,8 @@ import Header from "./components/Header";
 import Catalog from "./screens/Catalog";
 import Home from "./screens/Home";
 import ProductPage from "./screens/ProductPage";
-import products from "./products";
 
 class App extends Component {
-  state = {
-    products,
-  };
-
   render() {
     return (
       <>

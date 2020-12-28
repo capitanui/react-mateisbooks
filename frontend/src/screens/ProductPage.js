@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Button } from "react-bootstrap";
+import { Row, Col, Image, ListGroup, Card, Badge } from "react-bootstrap";
 import Rating from "../components/Rating";
+import DiscountTag from "../components/DiscountTag";
+import ProductPrice from "../components/ProductPrice";
+
 import products from "../products";
 
 const ProductPage = ({ match }) => {
@@ -19,6 +22,7 @@ const ProductPage = ({ match }) => {
               <h4>{product.name}</h4>
             </ListGroup.Item>
             <ListGroup.Item className="border-0">
+              <DiscountTag product={product} />
               <Image src={product.image} alt={product.name} fluid />
             </ListGroup.Item>
           </ListGroup>
@@ -32,6 +36,21 @@ const ProductPage = ({ match }) => {
               />
             </ListGroup.Item>
             <ListGroup.Item>{product.description}</ListGroup.Item>
+            <ListGroup.Item>
+              <span className="mt-auto py-5"> Vezi pe Youtube </span>
+              <a
+                href={product.ytblink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/images/youtube.png"
+                  alt="ytblink"
+                  width="40"
+                  height="31"
+                />
+              </a>
+            </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={3}>
@@ -40,11 +59,11 @@ const ProductPage = ({ match }) => {
               <Row>
                 <Col>Pret:</Col>
                 <Col>
-                  <strong>{product.price} Lei</strong>
+                  <ProductPrice product={product} />
                 </Col>
               </Row>
             </ListGroup.Item>
-            <ListGroup.Item>
+            {/* <ListGroup.Item>
               <Row>
                 <Col>Status:</Col>
                 <Col>
@@ -67,7 +86,7 @@ const ProductPage = ({ match }) => {
                 </span>
                 Adauga in lista
               </Button>
-            </ListGroup.Item>
+            </ListGroup.Item> */}
           </ListGroup>
         </Col>
       </Row>

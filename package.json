@@ -1,0 +1,14 @@
+{
+  "name": "cartileluimatei",
+  "version": "1.0.0",
+  "description": "Biblioteca Lui Matei",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "icapitanu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
