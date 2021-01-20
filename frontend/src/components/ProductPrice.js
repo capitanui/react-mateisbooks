@@ -1,8 +1,9 @@
 import React from "react";
 
 const ProductPrice = ({ product }) => {
+  console.log(product.price);
   let hasDiscount = product.discount > 0;
-  let fullPrice = product.price.toFixed(2);
+  let fullPrice = product.price;
   let discountPrice = (
     fullPrice -
     (product.price * product.discount) / 100

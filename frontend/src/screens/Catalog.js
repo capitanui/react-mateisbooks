@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import products from "../products";
 import Product from "../components/Product.js";
 import Categories from "../components/Categories";
+import axios from "axios";
 
 class Catalog extends Component {
   state = {
-    products,
+    products: [],
   };
 
   filterByCategory = (category) => {
@@ -21,14 +21,18 @@ class Catalog extends Component {
         ),
       ],
     });
-
-    console.log(this);
   };
+
+  // Fetch products from backend using axios
+  componentDidMount() {
+    axios
+      .get("/api/products")
+      .then(({ data }) => this.setState({ products: data }));
+  }
 
   render() {
     return (
       <>
-        <Container className="my-5">Catalog</Container>
         <Container className="my-5">
           <Categories
             filter={this.filterByCategory}
@@ -39,7 +43,7 @@ class Catalog extends Component {
         <Row className="py-2">
           {this.state.products.map((product) => (
             <Col
-              key={product._id}
+              key={product.code}
               sm={11}
               md={5}
               lg={3}

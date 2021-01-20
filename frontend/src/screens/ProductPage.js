@@ -1,34 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Badge } from "react-bootstrap";
+import { Row, Col, ListGroup, Carousel, Image } from "react-bootstrap";
 import Rating from "../components/Rating";
 import DiscountTag from "../components/DiscountTag";
 import ProductPrice from "../components/ProductPrice";
-
-import products from "../products";
+import axios from "axios";
 
 const ProductPage = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id);
+  // useState hook to use state with functional components
+  const [product, setProduct] = useState({});
 
+  // useEffect hook Runs when the component loads
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+
+      setProduct(data);
+    };
+
+    fetchProduct();
+  }, [match.params.id]);
+
+  console.log(product);
   return (
     <>
       <Link className="btn btn-outline-success my-3" to="/">
         Inapoi
       </Link>
       <Row>
-        <Col md={4}>
+        <Col md={5}>
           <ListGroup variant="undefined">
-            <ListGroup.Item className="border-0">
-              <h4>{product.name}</h4>
-            </ListGroup.Item>
             <ListGroup.Item className="border-0">
               <DiscountTag product={product} />
               <Image src={product.image} alt={product.name} fluid />
+              {/* <Carousel interval={null} f>
+                <Carousel.Item>
+                  <DiscountTag product={product} />
+                  <img
+                    className="d-block w-100"
+                    src={product.image}
+                    alt="First img"
+                  />
+                </Carousel.Item>
+              </Carousel> */}
             </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={4}>
           <ListGroup variant="flush">
+            <ListGroup.Item className="border-0">
+              <h4>{product.name}</h4>
+            </ListGroup.Item>
             <ListGroup.Item>
               <Rating
                 value={product.rating}

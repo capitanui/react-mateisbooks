@@ -1,19 +1,34 @@
-const express = require("express");
-const products = require("./data/products");
+import express from "express";
+import dotenv from "dotenv";
+import colors from "colors";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import connectDB from "./config/db.js";
+import productRoutes from "./routes/productRoutes.js";
+
+dotenv.config();
+
+connectDB();
+
 const app = express();
 
-// Routes
+// Routes - define here
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-app.get("/api/products", (req, res) => {
-  res.json(products);
-});
+// Routes - use route defined in another file
+app.use("/api/products/", productRoutes);
 
-app.get("/api/products/:id", (req, res) => {
-  const product = products.find((product) => product._id === req.params.id);
-  res.json(product);
-});
+// Middleware for error handling
+app.use(notFound);
 
-app.listen(5000, console.log("Server running on port 5000"));
+app.use(errorHandler);
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+  )
+);

@@ -8,13 +8,13 @@ import ProductPrice from "./ProductPrice";
 const Product = ({ product }) => {
   return (
     <Card className="text-left h-100">
-      <Link to={`/product/${product._id}`}>
+      <Link to={`/product/${product.code}`}>
         <DiscountTag product={product} />
         <Card.Img src={product.image} variant="top" />
       </Link>
 
       <Card.Body className="d-flex flex-column text-dark">
-        <Link to={`/product/${product._id}`} className="mt-auto">
+        <Link to={`/product/${product.code}`} className="mt-auto">
           <Card.Title as="div">
             <h6>{product.name}</h6>
           </Card.Title>
