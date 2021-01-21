@@ -1,7 +1,6 @@
 import React from "react";
 
 const ProductPrice = ({ product }) => {
-  console.log(product.price);
   let hasDiscount = product.discount > 0;
   let fullPrice = product.price;
   let discountPrice = (

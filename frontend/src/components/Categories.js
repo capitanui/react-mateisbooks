@@ -1,46 +1,64 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import Media from "react-media";
+import { useDispatch } from "react-redux";
+import { Container, Row, Col, Button, Nav, NavDropdown } from "react-bootstrap";
 import "../roundButton.css";
+import { listProductFiltered } from "../actions/productActions";
 
-const Categories = ({ filter }) => {
-  let category1 = "0+";
-  let category2 = "1+";
-  let category3 = "3+";
+const Categories = ({ products }) => {
+  // Get unique categories from all products excluding empty values
+  const categories = products
+    .map((p) => p.category.split(","))
+    .flat()
+    .reduce(
+      (unique, item) =>
+        unique.includes(item) || item === "" ? unique : [...unique, item],
+      []
+    )
+    .sort(
+      (elem1, elem2) =>
+        parseInt(elem1.substring(0, 2)) - parseInt(elem2.substring(0, 2))
+    );
+
+  const dispatch = useDispatch();
 
   return (
     <Container>
-      <Row>
-        <Container className="my-4 h5 text-center">
-          Selecteaza varsta si gasesti cele mai frumoase carti pentru copilul
-          tau
-        </Container>
-      </Row>
-      <Row className="justify-content-md-center">
-        <Col xs lg="2">
-          <Button
-            onClick={filter.bind(this, category1)}
-            className="round-button"
-          >
-            3-9 ani
-          </Button>
-        </Col>
-        <Col xs lg="2">
-          <Button
-            onClick={filter.bind(this, category2)}
-            className="round-button"
-          >
-            1-3 ani
-          </Button>
-        </Col>
-        <Col xs lg="2">
-          <Button
-            onClick={filter.bind(this, category3)}
-            className="round-button"
-          >
-            3-6 ani
-          </Button>
-        </Col>
-      </Row>
+      <Media query="(max-width: 800px)">
+        <Row className="justify-content-center">
+          <Nav className="mr-auto">
+            <NavDropdown
+              style={{ fontSize: "130%" }}
+              title="Alege categoria de varsta"
+              id="collasible-nav-dropdown"
+            >
+              {categories.map((c) => (
+                <NavDropdown.Item
+                  onClick={() => dispatch(listProductFiltered(c))}
+                  variant="success"
+                >
+                  {c} ani
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Nav>
+        </Row>
+      </Media>
+
+      <Media query="(min-width: 800px)">
+        <Row className="justify-content-center">
+          {categories.map((c) => (
+            <Col md="1" className="mx-3 my-3">
+              <Button
+                onClick={() => dispatch(listProductFiltered(c))}
+                className="round-button"
+              >
+                {c} ani
+              </Button>
+            </Col>
+          ))}
+        </Row>
+      </Media>
     </Container>
   );
 };

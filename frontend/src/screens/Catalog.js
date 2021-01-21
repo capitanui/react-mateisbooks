@@ -1,62 +1,61 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Row, Col, Container } from "react-bootstrap";
 import Product from "../components/Product.js";
-import Categories from "../components/Categories";
-import axios from "axios";
+import Categories from "../components/Categories.js";
+import Message from "../components/Message.js";
+import Loader from "../components/Loader.js";
+import { listProductFiltered, listProducts } from "../actions/productActions";
 
-class Catalog extends Component {
-  state = {
-    products: [],
-  };
+const Catalog = () => {
+  const dispatch = useDispatch();
 
-  filterByCategory = (category) => {
-    this.state.products.forEach((e) => {
-      console.log(e.category);
-    });
+  const productListState = useSelector((state) => state.productList);
 
-    this.setState({
-      products: [
-        ...this.state.products.filter(
-          (product) => product.category === category
-        ),
-      ],
-    });
-  };
+  const productListFull = productListState.products;
 
-  // Fetch products from backend using axios
-  componentDidMount() {
-    axios
-      .get("/api/products")
-      .then(({ data }) => this.setState({ products: data }));
-  }
+  const productFiltered = useSelector((state) => state.productFiltered);
 
-  render() {
-    return (
-      <>
-        <Container className="my-5">
-          <Categories
-            filter={this.filterByCategory}
-            products={this.state.products}
-          />
-        </Container>
+  const { loading, error, products } = productFiltered;
 
-        <Row className="py-2">
-          {this.state.products.map((product) => (
-            <Col
-              key={product.code}
-              sm={11}
-              md={5}
-              lg={3}
-              xl={2}
-              className="mb-4"
-            >
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
-      </>
-    );
-  }
-}
+  // useEffect hook Runs when the component loads - get all products
+  useEffect(() => {
+    dispatch(listProducts());
+    dispatch(listProductFiltered(".*"));
+  }, [dispatch]);
+
+  return (
+    <>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant="danger">{error}</Message>
+      ) : (
+        <>
+          <Container className="my-5">
+            <Categories products={productListFull} />
+            {/* <div class="font-weight-light text-sm-left my-3">
+              {products.length - 1} produse
+            </div> */}
+          </Container>
+          <Row className="py-2">
+            {products.map((product) => (
+              <Col
+                key={product.code}
+                sm={12}
+                md={6}
+                lg={4}
+                xl={3}
+                className="mb-4"
+              >
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+        </>
+      )}
+    </>
+  );
+};
 
 export default Catalog;
