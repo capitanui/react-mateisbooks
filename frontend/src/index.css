@@ -9,3 +9,8 @@ main {
 .rating span {
   margin: 0.5rem;
 }
+
+@font-face {
+  font-family: "latoblack";
+  src: local("Lato-Black"), url(./fonts/Lato-Black.ttf) format("truetype");
+}

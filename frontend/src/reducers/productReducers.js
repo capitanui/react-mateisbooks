@@ -47,7 +47,11 @@ export const productFilterReducer = (state = { products: [] }, action) => {
     case PRODUCT_FILTER_REQUEST:
       return { loading: true, ...state };
     case PRODUCT_FILTER_SUCCESS:
-      return { loading: false, products: action.payload };
+      return {
+        loading: false,
+        products: action.payload.data,
+        selectedCategory: action.payload.category,
+      };
     case PRODUCT_FILTER_FAIL:
       return { loading: false, error: action.payload };
     default:

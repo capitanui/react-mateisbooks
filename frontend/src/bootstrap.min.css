@@ -2162,7 +2162,7 @@ textarea.form-control.is-valid {
 }
 .form-check-input.is-valid ~ .form-check-label,
 .was-validated .form-check-input:valid ~ .form-check-label {
-  color: #56cc9d;
+  color: #646665;
 }
 .form-check-input.is-valid ~ .valid-feedback,
 .form-check-input.is-valid ~ .valid-tooltip,

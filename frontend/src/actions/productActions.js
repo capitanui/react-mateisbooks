@@ -8,6 +8,9 @@ import {
   PRODUCT_LIST_FAIL,
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
+  PRODUCT_STOCKFILTER_FAIL,
+  PRODUCT_STOCKFILTER_REQUEST,
+  PRODUCT_STOCKFILTER_SUCCESS,
 } from "../constants/productConstants";
 import axios from "axios";
 
@@ -70,7 +73,10 @@ export const listProductFiltered = (category) => async (dispatch) => {
 
     dispatch({
       type: PRODUCT_FILTER_SUCCESS,
-      payload: data,
+      payload: {
+        category,
+        data,
+      },
     });
   } catch (error) {
     dispatch({
