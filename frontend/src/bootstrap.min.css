@@ -506,17 +506,18 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 576px) {
   .container,
   .container-sm {
-    max-width: 540px;
+    max-width: 90%;
   }
 }
 @media (min-width: 768px) {
   .container,
   .container-md,
   .container-sm {
-    max-width: 720px;
+    max-width: 90%;
   }
 }
 @media (min-width: 992px) {
@@ -524,7 +525,7 @@ pre code {
   .container-lg,
   .container-md,
   .container-sm {
-    max-width: 960px;
+    max-width: 90%;
   }
 }
 @media (min-width: 1200px) {
@@ -533,7 +534,7 @@ pre code {
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 1140px;
+    max-width: 90%;
   }
 }
 .row {
@@ -4392,7 +4393,7 @@ input[type="submit"].btn-block {
   border-color: rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%255, 102, 103, 0.3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
   color: rgba(0, 0, 0, 0.3);
@@ -4534,7 +4535,7 @@ input[type="submit"].btn-block {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1.25rem;
+  padding: 0.2rem;
   border-radius: calc(0.4rem - 1px);
 }
 .card-img,

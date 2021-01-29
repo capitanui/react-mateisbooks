@@ -4,7 +4,7 @@ import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Button, Nav, NavDropdown } from "react-bootstrap";
-import { listProducts, listProductFiltered } from "../actions/productActions";
+import { listProducts, updateProductFilters } from "../actions/productActions";
 import "../roundButton.css";
 
 const Categories = () => {
@@ -40,7 +40,7 @@ const Categories = () => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Container>
+        <Container style={{ zIndex: "-1" }}>
           <Media query="(max-width: 800px)">
             <Row className="justify-content-center">
               <Nav className="mr-auto">
@@ -51,14 +51,18 @@ const Categories = () => {
                 >
                   {categories.map((c) => (
                     <NavDropdown.Item
-                      onClick={() => dispatch(listProductFiltered(c))}
+                      onClick={() =>
+                        dispatch(updateProductFilters({ category: c }))
+                      }
                       variant="success"
                     >
                       {c} ani
                     </NavDropdown.Item>
                   ))}
                   <NavDropdown.Item
-                    onClick={() => dispatch(listProductFiltered(".*"))}
+                    onClick={() =>
+                      dispatch(updateProductFilters({ category: "-" }))
+                    }
                     variant="success"
                   >
                     Toate
@@ -72,7 +76,9 @@ const Categories = () => {
               {categories.map((c) => (
                 <Col md="1" className="mx-3 my-3">
                   <Button
-                    onClick={() => dispatch(listProductFiltered(c))}
+                    onClick={() =>
+                      dispatch(updateProductFilters({ category: c }))
+                    }
                     className="round-button"
                   >
                     {c} ani
@@ -81,7 +87,9 @@ const Categories = () => {
               ))}
               <Col md="1" className="mx-3 my-3">
                 <Button
-                  onClick={() => dispatch(listProductFiltered(".*"))}
+                  onClick={() =>
+                    dispatch(updateProductFilters({ category: "-" }))
+                  }
                   className="round-button"
                 >
                   Toate

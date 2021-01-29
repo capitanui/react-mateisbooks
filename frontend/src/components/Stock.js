@@ -1,22 +1,17 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Row, Col } from "react-bootstrap";
+import React from "react";
+import { useSelector } from "react-redux";
+import { Row, Col, Container } from "react-bootstrap";
 import Product from "../components/Product.js";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
-import { listProductFiltered } from "../actions/productActions";
 
 const Stock = () => {
-  const dispatch = useDispatch();
+  const productListFiltered = useSelector((state) => state.productListFiltered);
+  const productFilters = useSelector((state) => state.productFilters);
 
-  const productFiltered = useSelector((state) => state.productFiltered);
+  const { loading, error, products } = productListFiltered;
 
-  const { loading, error, products, selectedCategory } = productFiltered;
-
-  // useEffect hook Runs when the component loads - get all products
-  useEffect(() => {
-    dispatch(listProductFiltered(".*"));
-  }, [dispatch]);
+  const { category } = productFilters;
 
   return (
     <>
@@ -25,7 +20,7 @@ const Stock = () => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <>
+        <Container>
           <Row className="justify-content-right mx-1">
             <div
               style={{
@@ -34,7 +29,7 @@ const Stock = () => {
                 textTransform: "none",
               }}
             >
-              {selectedCategory === ".*" ? "" : selectedCategory + " ani"}
+              {category === "-" ? "" : category + " ani"}
             </div>
           </Row>
           <Row className="justify-content-right mx-1">
@@ -47,17 +42,18 @@ const Stock = () => {
             {products.map((product) => (
               <Col
                 key={product.code}
-                sm={12}
+                xs={6}
+                sm={6}
                 md={6}
                 lg={4}
-                xl={4}
+                xl={3}
                 className="mb-4"
               >
                 <Product product={product} />
               </Col>
             ))}
           </Row>
-        </>
+        </Container>
       )}
     </>
   );

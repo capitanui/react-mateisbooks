@@ -1,11 +1,11 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Divider from "../components/Divider";
 
 const Home = () => {
   return (
-    <>
-      <Container className="my-5">Home</Container>
-    </>
+    <div className="my-3 px-0">
+      <Divider />
+    </div>
   );
 };
 

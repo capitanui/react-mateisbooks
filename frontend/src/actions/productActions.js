@@ -8,9 +8,7 @@ import {
   PRODUCT_LIST_FAIL,
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
-  PRODUCT_STOCKFILTER_FAIL,
-  PRODUCT_STOCKFILTER_REQUEST,
-  PRODUCT_STOCKFILTER_SUCCESS,
+  UPDATE_PRODUCT_FILTERS,
 } from "../constants/productConstants";
 import axios from "axios";
 
@@ -27,6 +25,8 @@ export const listProducts = () => async (dispatch) => {
       type: PRODUCT_LIST_SUCCESS,
       payload: data,
     });
+
+    dispatch(applyProductFilters());
   } catch (error) {
     dispatch({
       type: PRODUCT_LIST_FAIL,
@@ -62,14 +62,68 @@ export const listProductDetails = (id) => async (dispatch) => {
   }
 };
 
-// List products filtered by category action
-export const listProductFiltered = (category) => async (dispatch) => {
+// Update product filters action
+export const updateProductFilters = (newFilter) => async (
+  dispatch,
+  getState
+) => {
+  //Get current filter from state
+  let { productFilters } = getState();
+
+  productFilters = {
+    category:
+      typeof newFilter.category !== "undefined"
+        ? newFilter.category
+        : productFilters.category,
+    inStock:
+      newFilter.inStock === "toggle"
+        ? !productFilters.inStock
+        : productFilters.inStock,
+    comingSoon:
+      newFilter.comingSoon === "toggle"
+        ? !productFilters.comingSoon
+        : productFilters.comingSoon,
+  };
+
+  dispatch({
+    type: UPDATE_PRODUCT_FILTERS,
+    payload: productFilters,
+  });
+
+  dispatch(applyProductFilters());
+};
+
+// Apply product filters action
+export const applyProductFilters = () => async (dispatch, getState) => {
   try {
     dispatch({
       type: PRODUCT_FILTER_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/products/category/${category}`);
+    const { productFilters, productList } = getState();
+    const { category, inStock, comingSoon } = productFilters;
+    let { products } = productList;
+
+    //Filter by category
+    if (category !== "-") {
+      products = products.filter((product) =>
+        product.category.includes(category)
+      );
+    }
+
+    //Filter by stock
+    if (inStock) {
+      products = products.filter((product) => product.countInStock > 0);
+    }
+
+    //Filter by comingSoon
+    if (comingSoon) {
+      products = products.filter(
+        (product) => product.countInStock === 0 && product.order === "Yes"
+      );
+    }
+
+    const data = products;
 
     dispatch({
       type: PRODUCT_FILTER_SUCCESS,

@@ -73,6 +73,16 @@ const productSchema = mongoose.Schema(
       required: false,
       default: "https://youtube.com",
     },
+    order: {
+      type: String,
+      required: false,
+      default: "No",
+    },
+    orderCount: {
+      type: Number,
+      required: false,
+      default: 0,
+    },
   },
   {
     timestamps: true,

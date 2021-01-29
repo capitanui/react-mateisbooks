@@ -2,15 +2,73 @@ main {
   height: 100;
 }
 
-.card:hover {
+.btnH {
+  text-decoration: none !important;
+}
+
+.cardH:hover {
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.cardH:hover .favy {
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Remove border on focus mui button - Contul Meu  */
+*:focus {
+  outline: none !important;
+}
+
+.favy {
+  opacity: 0;
 }
 
 .rating span {
   margin: 0.5rem;
 }
 
+.nav-link:hover {
+  color: #b73e3e !important;
+}
+
+.navbar-nav > a:hover {
+  color: "red" !important;
+}
+h1 {
+  font-family: "latoblack";
+  font-size: 1.8rem;
+  padding: 0.1rem;
+}
+
+h2 {
+  font-family: "latoblack";
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(34,34,34, 0.8)' stroke-width='2' stroke-linecap='none' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border: 0;
+  border-color: rgb(34, 34, 34);
+}
+
 @font-face {
   font-family: "latoblack";
   src: local("Lato-Black"), url(./fonts/Lato-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "latolight";
+  src: local("Lato-Light"), url(./fonts/Lato-Light.ttf) format("truetype");
 }

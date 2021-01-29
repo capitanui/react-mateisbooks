@@ -8,7 +8,8 @@ import {
   PRODUCT_LIST_FAIL,
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
-} from "../constants/productConstants";
+  UPDATE_PRODUCT_FILTERS,
+} from "../constants/productConstants.js";
 
 // Product list reducer
 export const productListReducer = (state = { products: [] }, action) => {
@@ -18,6 +19,20 @@ export const productListReducer = (state = { products: [] }, action) => {
     case PRODUCT_LIST_SUCCESS:
       return { loading: false, products: action.payload };
     case PRODUCT_LIST_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+// Product filter reducer
+export const productFilterReducer = (state = { products: [] }, action) => {
+  switch (action.type) {
+    case PRODUCT_FILTER_REQUEST:
+      return { loading: true, products: [] };
+    case PRODUCT_FILTER_SUCCESS:
+      return { loading: false, products: action.payload.data };
+    case PRODUCT_FILTER_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;
@@ -41,19 +56,23 @@ export const productDetailsReducer = (
   }
 };
 
-// Product filtered by category reducer
-export const productFilterReducer = (state = { products: [] }, action) => {
+// Update product filters reducer
+export const productUpdateFilterReducer = (
+  state = {
+    category: "-",
+    inStock: false,
+    comingSoon: false,
+  },
+  action
+) => {
   switch (action.type) {
-    case PRODUCT_FILTER_REQUEST:
-      return { loading: true, ...state };
-    case PRODUCT_FILTER_SUCCESS:
+    case UPDATE_PRODUCT_FILTERS:
       return {
-        loading: false,
-        products: action.payload.data,
-        selectedCategory: action.payload.category,
+        category: action.payload.category,
+        inStock: action.payload.inStock,
+        comingSoon: action.payload.comingSoon,
       };
-    case PRODUCT_FILTER_FAIL:
-      return { loading: false, error: action.payload };
+
     default:
       return state;
   }

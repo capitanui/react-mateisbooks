@@ -9,20 +9,36 @@ const ProductPrice = ({ product }) => {
   ).toFixed(2);
 
   return (
-    <div>
+    <div class="mt-0">
       <div
         style={
           hasDiscount
-            ? { textDecoration: "line-through", color: "#ccc", fontSize: 15 }
-            : { color: "#ff7851" }
+            ? {
+                fontFamily:
+                  '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
+                textDecoration: "line-through",
+                color: "#ccc",
+                fontSize: "13px",
+              }
+            : {
+                fontFamily:
+                  '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
+                color: "#ff8152",
+                fontSize: "18px",
+              }
         }
       >
-        {" "}
-        {fullPrice} Lei
+        {fullPrice} lei
       </div>
-      <div className="text-danger">
-        {" "}
-        {hasDiscount ? `${discountPrice} Lei` : <br></br>}
+      <div
+        style={{
+          fontFamily:
+            '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
+          color: "#ff8152",
+          fontSize: "18px",
+        }}
+      >
+        {hasDiscount ? `${discountPrice} lei` : ""}
       </div>
     </div>
   );
