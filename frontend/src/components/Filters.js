@@ -12,7 +12,7 @@ const Filters = () => {
   return (
     <>
       <Card border="success" style={{ marginTop: "130px" }}>
-        <Card.Header style={{ backgroundColor: "#96d09c" }}>
+        <Card.Header style={{ backgroundColor: "#6fda9f" }}>
           <div
             style={{
               fontSize: "16px",
@@ -28,7 +28,7 @@ const Filters = () => {
               <Form.Check
                 type="switch"
                 id="instoc"
-                label="In Stoc"
+                label="În Stoc"
                 checked={inStock}
                 onChange={() =>
                   dispatch(updateProductFilters({ inStock: "toggle" }))
@@ -39,7 +39,7 @@ const Filters = () => {
               <Form.Check
                 type="switch"
                 id="comingsoon"
-                label="Coming Soon"
+                label="În curând"
                 onChange={() =>
                   dispatch(updateProductFilters({ comingSoon: "toggle" }))
                 }
@@ -48,7 +48,7 @@ const Filters = () => {
             </ListGroup.Item>
           </ListGroup>
         </Card.Body>
-        <Card.Header style={{ backgroundColor: "#96d09c" }}>
+        <Card.Header style={{ backgroundColor: "#6fda9f" }}>
           <div
             style={{
               fontSize: "18px",
@@ -64,35 +64,35 @@ const Filters = () => {
               <Form.Check
                 type="checkbox"
                 id="instoc"
-                label="Carti cu clapete"
+                label="Cărți cu clapete"
               />
             </ListGroup.Item>
             <ListGroup.Item className="border-0">
               <Form.Check
                 type="checkbox"
                 id="comingsoon"
-                label="Carti cu sunete"
+                label="Cărți cu sunete"
               />
             </ListGroup.Item>
             <ListGroup.Item className="border-0">
               <Form.Check
                 type="checkbox"
                 id="comingsoon"
-                label="Carti cu activitati"
+                label="Cărți cu activități"
               />
             </ListGroup.Item>
             <ListGroup.Item className="border-0">
               <Form.Check
                 type="checkbox"
                 id="comingsoon"
-                label="Carti de colorat"
+                label="Cărți de colorat"
               />
             </ListGroup.Item>
             <ListGroup.Item className="border-0">
               <Form.Check
                 type="checkbox"
                 id="comingsoon"
-                label="Carti senzoriale"
+                label="Cărți senzoriale"
               />
             </ListGroup.Item>
           </ListGroup>

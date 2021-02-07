@@ -57,7 +57,7 @@ const Product = ({ product }) => {
         ) : (
           <div class="d-flex justify-content-end favy">
             <span
-              style={{ fontSize: "25px", color: "#a1684b" }}
+              style={{ fontSize: "25px", color: "#ff8152" }}
               onClick={() => addToFavoritesHandler(product.code)}
             >
               <i class="fas fa-heart mr-lg-1 "></i>

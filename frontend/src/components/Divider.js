@@ -1,30 +1,34 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 import CategoriesDropdown from "./CategoriesDropdown";
 
 const Divider = () => {
   const style = {
     rectangleBottom: {
-      width: "100%",
       height: "6vh",
       backgroundColor: "#55916b",
-      zIndex: -1,
+      zIndex: -10,
+    },
+    text: {
+      fontFamily: "latolight",
+      fontSize: "2.1vmin",
+      color: "white",
     },
   };
   return (
     <Container>
+      <CategoriesDropdown />
       <Row
-        className="d-flex flex-row "
-        style={{
-          fontFamily: "latolight",
-          fontSize: "20px",
-          color: "white",
-        }}
+        style={style.rectangleBottom}
+        className="d-flex justify-content-around align-items-center"
       >
-        <Col className="px-0">
-          <CategoriesDropdown stlye={{ position: "absolute" }} />
-          <div style={style.rectangleBottom}></div>
-        </Col>
+        {/* <Form inline style={{ marginLeft: "50vmin" }}>
+          <FormControl type="text" placeholder="Cauta titlul cartii" />
+        </Form> */}
+        <span style={style.text} class="ml-auto mr-4">
+          <i class="fa fa-truck"> </i>
+          TRANSPORT GRATUIT PESTE 150 Lei
+        </span>
       </Row>
     </Container>
   );

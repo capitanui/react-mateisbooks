@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import { Link } from "react-router-dom";
 
 const TopHeader = () => {
   const textStyle = {
@@ -45,15 +46,15 @@ const TopHeader = () => {
           } align-items-center`}
         >
           <Col>
-            <i class="fas fa-phone ml-0 text-nowrap">
-              <span class="ml-1" style={textStyle}>
+            <i className="fas fa-phone ml-0 text-nowrap">
+              <span className="ml-1" style={textStyle}>
                 +4 0744 178 638
               </span>
             </i>
           </Col>
           <Col className="mr-auto">
-            <i class="fas fa-envelope mr-1 ">
-              <span class="ml-1 text-nowrap" style={textStyle}>
+            <i className="fas fa-envelope mr-1 ">
+              <span className="ml-1 text-nowrap" style={textStyle}>
                 anca.capitanu@cartileluimatei.ro
               </span>
             </i>
@@ -65,16 +66,17 @@ const TopHeader = () => {
           md={4}
           className="d-flex flex-row justify-content-end ml-auto"
         >
-          <ButtonGroup size="small" variant="text">
+          <ButtonGroup size="small">
             <Button
               aria-controls="simple-menu"
               aria-haspopup="true"
+              variant="text"
               onClick={handleClick}
             >
               <Col>
-                <i class="fas fa-user">
-                  <span class="ml-1 text-nowrap" style={textStyle}>
-                    Contul tau
+                <i className="fas fa-user">
+                  <span className="ml-1 text-nowrap" style={textStyle}>
+                    Contul tãu
                   </span>
                 </i>
               </Col>
@@ -86,14 +88,21 @@ const TopHeader = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose} style={textStyle}>
-                Profilul tau
+              <MenuItem
+                component={Link}
+                to="/contultau"
+                onClick={handleClose}
+                style={textStyle}
+              >
+                Intrã în cont
               </MenuItem>
-              <MenuItem onClick={handleClose} style={textStyle}>
-                Comenzile tale
-              </MenuItem>
-              <MenuItem onClick={handleClose} style={textStyle}>
-                Iesire
+              <MenuItem
+                component={Link}
+                to="/contultau"
+                onClick={handleClose}
+                style={textStyle}
+              >
+                Creeazã cont
               </MenuItem>
             </Menu>
           </ButtonGroup>

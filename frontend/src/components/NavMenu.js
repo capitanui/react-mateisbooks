@@ -14,18 +14,18 @@ const NavMenu = () => {
         <Navbar.Collapse style={textStyle} id="basic-navbar-nav">
           <Nav className="d-flex justify-content-end">
             <LinkContainer to="/" className="mr-3">
-              <Nav.Link className="py-3 active">Acasa</Nav.Link>
+              <Nav.Link className="py-3 active">Acasã</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/catalog" className="mr-3">
               <Nav.Link className="py-3 active">Catalog</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/catalog" className="mr-3">
-              <Nav.Link className="py-3 active">Povestea Noastra</Nav.Link>
+            <LinkContainer to="/ourstory" className="mr-3">
+              <Nav.Link className="py-3 active">Povestea Noastrã</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/voucher" className="mr-3">
               <Nav.Link className="py-3 active">Voucher Cadou</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/voucher" className="mr-3">
+            <LinkContainer to="/contact" className="mr-3">
               <Nav.Link className="py-3 active">Contact</Nav.Link>
             </LinkContainer>
           </Nav>

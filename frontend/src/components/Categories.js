@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Media from "react-media";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Button, Nav, NavDropdown } from "react-bootstrap";
-import { listProducts, updateProductFilters } from "../actions/productActions";
+import { updateProductFilters } from "../actions/productActions";
 import "../roundButton.css";
 
 const Categories = () => {
@@ -12,26 +12,11 @@ const Categories = () => {
 
   const productList = useSelector((state) => state.productList);
 
-  const { loading, error, products } = productList;
+  let { loading, error, categories } = productList;
 
-  // useEffect hook Runs when the component loads - get all products
-  useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
-
-  // Get unique categories from all products excluding empty values
-  const categories = products
-    .map((p) => p.category.split(","))
-    .flat()
-    .reduce(
-      (unique, item) =>
-        unique.includes(item) || item === "" ? unique : [...unique, item],
-      []
-    )
-    .sort(
-      (elem1, elem2) =>
-        parseInt(elem1.substring(0, 2)) - parseInt(elem2.substring(0, 2))
-    );
+  if (categories == null) {
+    categories = [];
+  }
 
   return (
     <>
@@ -45,8 +30,8 @@ const Categories = () => {
             <Row className="justify-content-center">
               <Nav className="mr-auto">
                 <NavDropdown
-                  style={{ fontSize: "130%" }}
-                  title="Alege categoria de varsta"
+                  style={{ fontSize: "140%" }}
+                  title="Categoria de vârstă"
                   id="collasible-nav-dropdown"
                 >
                   {categories.map((c) => (

@@ -21,9 +21,26 @@ export const listProducts = () => async (dispatch) => {
 
     const { data } = await axios.get("/api/products");
 
+    // Get unique categories from all products excluding empty values
+    const categories = data
+      .map((p) => p.category.split(","))
+      .flat()
+      .reduce(
+        (unique, item) =>
+          unique.includes(item) || item === "" ? unique : [...unique, item],
+        []
+      )
+      .sort(
+        (elem1, elem2) =>
+          parseInt(elem1.substring(0, 2)) - parseInt(elem2.substring(0, 2))
+      );
+
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
-      payload: data,
+      payload: {
+        data,
+        categories,
+      },
     });
 
     dispatch(applyProductFilters());

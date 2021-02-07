@@ -8,13 +8,8 @@ const DiscountTag = ({ product }) => {
     <div>
       {isComingSoon ? (
         <div style={{ position: "absolute", top: 0, right: 0 }}>
-          <Badge
-            variant="danger"
-            as="div"
-            className="float-right mr-0"
-            //  style={{ backgroundColor: "#a1684b" }}
-          >
-            Coming Soon
+          <Badge variant="danger" as="div" className="float-right mr-0">
+            În curând
           </Badge>
         </div>
       ) : (

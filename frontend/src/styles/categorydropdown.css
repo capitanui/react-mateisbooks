@@ -10,14 +10,14 @@
   border-left: 10px solid transparent;
   border-right: 0px solid;
   border-bottom: 10px solid #555;
-  z-index: 10;
+  z-index: 110;
   padding: 0;
 }
 
 .header {
   width: 39vmin;
-  height: 112%;
-  background-color: #eeac31;
+  height: 8%;
+  background-color: #ff8152;
   position: absolute;
   margin-left: 10px;
   cursor: pointer;
@@ -38,7 +38,7 @@
 
 .header ul {
   position: absolute;
-  background: #eeac31;
+  background: #ff8152;
   margin-top: 2px;
   width: 39vmin;
   height: auto;
@@ -69,8 +69,8 @@
   background: none;
   border: none;
   font-family: latoblack;
-  font-size: 2vmin;
-  letter-spacing: 2px;
+  font-size: 2.4vmin;
+  letter-spacing: 1px;
   color: white;
   cursor: pointer;
 }

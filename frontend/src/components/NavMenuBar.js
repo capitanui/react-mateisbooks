@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
@@ -86,11 +87,37 @@ export default function NavMenuBar() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>Acasa</MenuItem>
-                    <MenuItem onClick={handleClose}>Catalog</MenuItem>
-                    <MenuItem onClick={handleClose}>Povestea Noastra</MenuItem>
-                    <MenuItem onClick={handleClose}>Voucher Cadou</MenuItem>
-                    <MenuItem onClick={handleClose}>Contact</MenuItem>
+                    <MenuItem onClick={handleClose} component={Link} to="/">
+                      Acasã
+                    </MenuItem>
+                    <MenuItem
+                      onClick={handleClose}
+                      component={Link}
+                      to="/catalog"
+                    >
+                      Catalog
+                    </MenuItem>
+                    <MenuItem
+                      onClick={handleClose}
+                      component={Link}
+                      to="/ourstory"
+                    >
+                      Povestea Noastrã
+                    </MenuItem>
+                    <MenuItem
+                      onClick={handleClose}
+                      component={Link}
+                      to="/voucher"
+                    >
+                      Voucher Cadou
+                    </MenuItem>
+                    <MenuItem
+                      onClick={handleClose}
+                      component={Link}
+                      to="/contact"
+                    >
+                      Contact
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

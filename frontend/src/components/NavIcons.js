@@ -32,7 +32,7 @@ const NavIcons = () => {
 
       <Col xs={2} md={2} lg={1} xl={1}>
         <Link to={`/reviews`} className="ml-4 btnH">
-          <Badge badgeContent={4} color="error" style={iconStyle}>
+          <Badge badgeContent={0} color="error" style={iconStyle}>
             <i class="far fa-star "></i>
           </Badge>
         </Link>

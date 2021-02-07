@@ -3,7 +3,7 @@
   z-index: 1;
   width: 86px;
   height: 86px;
-  background: #96d09c;
+  background: #6fda9f;
   border-radius: 50%;
   transition: box-shadow 400ms cubic-bezier(0.2, 0, 0.7, 1),
     transform 200ms cubic-bezier(0.2, 0, 0.7, 1);

@@ -13,7 +13,9 @@ const Navigation = () => {
     <Container>
       <Row className="align-items-center">
         <Col md={4} sm={6} xs={5} lg={4}>
-          <img src={logo} className="img-fluid" alt="banner"></img>
+          <a href="/">
+            <img src={logo} className="img-fluid" alt="banner" />
+          </a>
         </Col>
         <Col
           lg={6}
