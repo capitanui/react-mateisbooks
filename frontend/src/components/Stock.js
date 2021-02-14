@@ -42,11 +42,11 @@ const Stock = () => {
             {products.map((product) => (
               <Col
                 key={product.code}
-                xs={6}
+                xs={12}
                 sm={6}
                 md={6}
-                lg={4}
-                xl={3}
+                lg={3}
+                xl={4}
                 className="mb-4"
               >
                 <Product product={product} />

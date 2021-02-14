@@ -2,6 +2,7 @@ import React from "react";
 import Media from "react-media";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
+import Divider from "./Divider";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Button, Nav, NavDropdown } from "react-bootstrap";
 import { updateProductFilters } from "../actions/productActions";
@@ -26,37 +27,12 @@ const Categories = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <Container style={{ zIndex: "-1" }}>
-          <Media query="(max-width: 800px)">
-            <Row className="justify-content-center">
-              <Nav className="mr-auto">
-                <NavDropdown
-                  style={{ fontSize: "140%" }}
-                  title="Categoria de vârstă"
-                  id="collasible-nav-dropdown"
-                >
-                  {categories.map((c) => (
-                    <NavDropdown.Item
-                      onClick={() =>
-                        dispatch(updateProductFilters({ category: c }))
-                      }
-                      variant="success"
-                    >
-                      {c} ani
-                    </NavDropdown.Item>
-                  ))}
-                  <NavDropdown.Item
-                    onClick={() =>
-                      dispatch(updateProductFilters({ category: "-" }))
-                    }
-                    variant="success"
-                  >
-                    Toate
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Row>
+          <Media query="(max-width: 1000px)">
+            <div class="my-5">
+              <Divider />
+            </div>
           </Media>
-          <Media query="(min-width: 800px)">
+          <Media query="(min-width: 1000px)">
             <Row className="justify-content-center">
               {categories.map((c) => (
                 <Col md="1" className="mx-3 my-3">

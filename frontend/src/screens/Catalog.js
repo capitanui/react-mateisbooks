@@ -7,7 +7,7 @@ import Filters from "../components/Filters.js";
 
 const Catalog = () => {
   return (
-    <Container className="px-0">
+    <Container>
       <Row>
         <Media query="(min-width: 1250px)">
           <Col md={2}>

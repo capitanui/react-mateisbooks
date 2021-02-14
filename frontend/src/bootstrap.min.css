@@ -510,14 +510,14 @@ pre code {
 @media (min-width: 576px) {
   .container,
   .container-sm {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
   .container,
   .container-md,
   .container-sm {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -525,7 +525,7 @@ pre code {
   .container-lg,
   .container-md,
   .container-sm {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -534,7 +534,7 @@ pre code {
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 .row {

@@ -145,7 +145,7 @@ const ProductPage = ({ history, match }) => {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="/images/others/youtube.png"
+                      src="/images/youtube.png"
                       alt="ytblink"
                       width="40"
                       height="31"

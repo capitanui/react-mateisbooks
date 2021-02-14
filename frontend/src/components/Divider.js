@@ -1,8 +1,11 @@
 import React from "react";
 import { Row, Container } from "react-bootstrap";
 import CategoriesDropdown from "./CategoriesDropdown";
+import { useMediaQuery } from "react-responsive";
 
 const Divider = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 996px)" });
+
   const style = {
     rectangleBottom: {
       height: "6vh",
@@ -25,10 +28,12 @@ const Divider = () => {
         {/* <Form inline style={{ marginLeft: "50vmin" }}>
           <FormControl type="text" placeholder="Cauta titlul cartii" />
         </Form> */}
-        <span style={style.text} class="ml-auto mr-4">
-          <i class="fa fa-truck"> </i>
-          TRANSPORT GRATUIT PESTE 150 Lei
-        </span>
+        {!isTabletOrMobile && (
+          <span style={style.text} class="ml-auto mr-4">
+            <i class="fa fa-truck"> </i>
+            TRANSPORT GRATUIT PESTE 150 Lei
+          </span>
+        )}
       </Row>
     </Container>
   );

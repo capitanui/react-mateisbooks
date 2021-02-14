@@ -6,7 +6,8 @@ import { Navbar, Nav, Row } from "react-bootstrap";
 const NavMenu = () => {
   const textStyle = {
     fontFamily: "latolight",
-    fontSize: "18px",
+    fontSize: "1.2rem",
+    whiteSpace: "noWrap",
   };
   return (
     <Row className="d-flex flex-row justify-content-end">
