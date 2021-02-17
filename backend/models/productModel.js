@@ -83,6 +83,10 @@ const productSchema = mongoose.Schema(
       required: false,
       default: 0,
     },
+    categoryType: {
+      type: String,
+      required: false,
+    },
   },
   {
     timestamps: true,

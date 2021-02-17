@@ -1,23 +1,33 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 import "../styles/homeimagecategories.css";
 
 const HomeImageCategories = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 996px)" });
+
   return (
     <div
-      class="d-flex align-items-top justify-content-start  container"
+      class="container fluid pl-4 py-4 pr-4"
       style={{ background: "#6fda9f" }}
     >
-      <Row className="ml-0">
+      <Row>
         <Col md={4}>
           <div class="hovercategories">
             <figure>
-              <Image
-                width="1000vw"
-                src="../images/homepage/homeimagecategories_1.jpg"
-                fluid
-                className="my-2"
-              />
+              {isTabletOrMobile ? (
+                <Image
+                  src="../images/homepage/homeimagecategories_1_mob.png"
+                  fluid
+                  className="my-2"
+                />
+              ) : (
+                <Image
+                  src="../images/homepage/homeimagecategories_1.png"
+                  fluid
+                  className="my-2"
+                />
+              )}
               <div class="category-button">
                 <a href="/catalog">HOME SCHOOLING</a>
               </div>
@@ -28,8 +38,7 @@ const HomeImageCategories = () => {
           <div class="hovercategories">
             <figure>
               <Image
-                width="800vw"
-                src="../images/homepage/homeimagecategories_2.jpg"
+                src="../images/homepage/homeimagecategories_2.png"
                 fluid
                 className="my-2 mx-auto"
               />
@@ -41,8 +50,7 @@ const HomeImageCategories = () => {
           <div class="hovercategories">
             <figure>
               <Image
-                width="470vw"
-                src="../images/homepage/homeimagecategories_3.jpg"
+                src="../images/homepage/homeimagecategories_3.png"
                 fluid
                 className="my-4 mx-auto"
               />
@@ -56,8 +64,7 @@ const HomeImageCategories = () => {
           <div class="hovercategories">
             <figure>
               <Image
-                width="408vw"
-                src="../images/homepage/homeimagecategories_4.jpg"
+                src="../images/homepage/homeimagecategories_4.png"
                 fluid
                 className="my-2"
               />
@@ -69,8 +76,7 @@ const HomeImageCategories = () => {
           <div class="hovercategories">
             <figure>
               <Image
-                width="370vw"
-                src="../images/homepage/homeimagecategories_5.jpg"
+                src="../images/homepage/homeimagecategories_5.png"
                 fluid
                 className="my-4"
               />
