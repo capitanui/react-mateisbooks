@@ -34,20 +34,25 @@ export const listProducts = () => async (dispatch) => {
         (elem1, elem2) =>
           parseInt(elem1.substring(0, 2)) - parseInt(elem2.substring(0, 2))
       );
-    
-    //Get type of book categories from all products excluding empty values
-    const typeOfBookCategories = data.map((p) => p.categoryType.split(",")).flat()
-    .reduce(
-      (unique, item) =>
-        unique.includes(item) || item === "" ? unique : [...unique, item],
-      []
-    )
-    const 
+
+    // Get unique categories from all products excluding empty values
+    const typeOfBookCategories = data
+      .map((p) => p.categoryType.split(","))
+      .flat()
+      .reduce(
+        (unique, item) =>
+          unique.includes(item) || item === "" ? unique : [...unique, item],
+        []
+      );
+
+    console.log(typeOfBookCategories);
+
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
       payload: {
         data,
         categories,
+        typeOfBookCategories,
       },
     });
 

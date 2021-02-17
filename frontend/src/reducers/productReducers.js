@@ -21,6 +21,7 @@ export const productListReducer = (state = { products: [] }, action) => {
         loading: false,
         products: action.payload.data,
         categories: action.payload.categories,
+        typeOfBookCategories: action.payload.typeOfBookCategories,
       };
     case PRODUCT_LIST_FAIL:
       return { loading: false, error: action.payload };
