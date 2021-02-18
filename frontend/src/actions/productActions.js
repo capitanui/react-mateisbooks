@@ -45,8 +45,6 @@ export const listProducts = () => async (dispatch) => {
         []
       );
 
-    console.log(typeOfBookCategories);
-
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
       payload: {
@@ -113,6 +111,10 @@ export const updateProductFilters = (newFilter) => async (
       newFilter.comingSoon === "toggle"
         ? !productFilters.comingSoon
         : productFilters.comingSoon,
+    typeOfBookFilter:
+      typeof newFilter.typeOfBookFilter !== "undefined"
+        ? newFilter.typeOfBookFilter
+        : productFilters.typeOfBookFilter,
   };
 
   dispatch({
@@ -130,9 +132,20 @@ export const applyProductFilters = () => async (dispatch, getState) => {
       type: PRODUCT_FILTER_REQUEST,
     });
 
-    const { productFilters, productList } = getState();
-    const { category, inStock, comingSoon } = productFilters;
+    const { productFilters, productList, productListFiltered } = getState();
+    const { category, inStock, comingSoon, typeOfBookFilter } = productFilters;
     let { products } = productList;
+
+    // Filter by type of book category
+    if (typeOfBookFilter.length !== 0) {
+      products = products.filter((product) => {
+        let match = false;
+        typeOfBookFilter.forEach((filter) => {
+          if (product.categoryType.includes(filter)) match = true;
+        });
+        return match;
+      });
+    }
 
     //Filter by category
     if (category !== "-") {

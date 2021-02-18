@@ -14,7 +14,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu clapete,Carti senzoriale",
+    categoryType: "Cărți cu clapete,Cărți senzoriale",
   },
   {
     code: 92121,
@@ -31,7 +31,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 94062,
@@ -48,7 +48,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: "06281",
@@ -65,7 +65,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti limbi straine",
+    categoryType: "Cărți limbi străine",
   },
   {
     code: "06653",
@@ -82,7 +82,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti limbi straine",
+    categoryType: "Cărți limbi străine",
   },
   {
     code: "06782",
@@ -99,7 +99,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Craciun",
+    categoryType: "Crăciun",
   },
   {
     code: 56676,
@@ -116,7 +116,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: "08538",
@@ -150,7 +150,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
     code: 50869,
@@ -167,7 +167,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Cultura generala,Hobbies",
+    categoryType: "Cultură generală,Hobbies",
   },
   {
     code: 56515,
@@ -184,7 +184,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 51697,
@@ -201,7 +201,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Craciun,Carti senzoriale",
+    categoryType: "Crăciun,Cărți senzoriale",
   },
   {
     code: 52450,
@@ -218,7 +218,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu market",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 58204,
@@ -235,7 +235,7 @@ const products = [
     order: "Yes",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 58248,
@@ -252,7 +252,7 @@ const products = [
     order: "No",
     countInStock: 3,
     orderCount: 0,
-    categoryType: "Carti limbi straine,Carti cu sunete",
+    categoryType: "Cărți limbi străine,Cărți cu sunete",
   },
   {
     code: 96960,
@@ -269,7 +269,7 @@ const products = [
     order: "No",
     countInStock: 3,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti limbi straine,Carti de fictiune",
+    categoryType: "Cărți cu sunete,Cărți limbi străine,Cărți de ficțiune",
   },
   {
     code: 92404,
@@ -285,7 +285,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 53242,
@@ -302,7 +302,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Cultura generala,Hobbies",
+    categoryType: "Cultură generală,Hobbies",
   },
   {
     code: 95364,
@@ -319,7 +319,7 @@ const products = [
     order: "No",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 52295,
@@ -336,14 +336,14 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 52290,
     name: "Baby's Very First Noisy Things That Go",
     price: 60,
     description:
-      "Irresistible board book with five buttons to make noises to accompany the pictures. Little hands will love pressing the buttons to hear the bus ‘beep, beep!’, the plane ‘zoom!’, the boat ‘hoot, hoot!’, the train ‘choo, choo!’ and the fire engine ‘nee-naw!’ Simple picture tabs allow children to find their favourite vehicles.",
+      "Irresistible board book with five buttons to make noises to accompany the pictures. Little hands will love pressing the buttons to hear the bus ‘beep, beep!’, the plane ‘zoom!’, the boat ‘hoot, hoot!’, the train ‘choo, choo!’ and the fire engine ‘nee-naw!’ simple picture tabs allow children to find their favourite vehicles.",
     category: "0-1,1-3",
     discount: "",
     ytblink: "https://www.youtube.com/watch?v=awdTYb6UtQY",
@@ -353,7 +353,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
     code: 54994,
@@ -370,7 +370,7 @@ const products = [
     order: "No",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 55001,
@@ -387,7 +387,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer,Cultura generala,",
+    categoryType: "Cărți cu stickere și transfer,Cultură generală,",
   },
   {
     code: 53043,
@@ -404,7 +404,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti senzoriale,Carti limbi straine",
+    categoryType: "Cărți senzoriale,Cărți limbi străine",
   },
   {
     code: 93759,
@@ -438,7 +438,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 55016,
@@ -455,7 +455,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu activitati",
+    categoryType: "Cărți cu activități",
   },
   {
     code: 55045,
@@ -472,7 +472,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 55156,
@@ -489,7 +489,7 @@ const products = [
     order: "yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 57054,
@@ -506,7 +506,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 58127,
@@ -540,7 +540,7 @@ const products = [
     order: "No",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 95124,
@@ -557,7 +557,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu market",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 58280,
@@ -574,7 +574,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu market",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 94806,
@@ -607,7 +607,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 56510,
@@ -624,7 +624,7 @@ const products = [
     order: "yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale,Carti cu clapete",
+    categoryType: "Cărți cu sunete,Cărți senzoriale,Cărți cu clapete",
   },
   {
     code: 58135,
@@ -641,7 +641,7 @@ const products = [
     order: "No",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu activitati",
+    categoryType: "Cărți cu activități",
   },
   {
     code: 59864,
@@ -658,7 +658,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Cultura generala",
+    categoryType: "Cultură generală",
   },
   {
     code: 96996,
@@ -692,7 +692,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 92634,
@@ -726,7 +726,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu claviatura",
+    categoryType: "Cărți cu claviatura",
   },
   {
     code: 58260,
@@ -743,7 +743,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 58279,
@@ -760,7 +760,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 95904,
@@ -777,7 +777,7 @@ const products = [
     order: "No",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 55538,
@@ -794,7 +794,7 @@ const products = [
     order: "yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 58236,
@@ -811,7 +811,7 @@ const products = [
     order: "yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96811,
@@ -843,8 +843,8 @@ const products = [
     image: "/images/products/96756.jpg",
     order: "",
     countInStock: 0,
-    orderCount: "",
-    categoryType: "",
+    orderCount: 0,
+    categoryType: "Board books",
   },
   {
     code: 96029,
@@ -878,7 +878,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 95478,
@@ -895,7 +895,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 95085,
@@ -912,7 +912,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Cultura generala,Carti cu clapete",
+    categoryType: "Cultură generală,Cărți cu clapete",
   },
   {
     code: 94952,
@@ -929,7 +929,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 56514,
@@ -946,7 +946,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96964,
@@ -980,7 +980,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
     code: 96958,
@@ -997,7 +997,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti limbi straine,Carti de fictiune",
+    categoryType: "Cărți cu sunete,Cărți limbi străine,Cărți de ficțiune",
   },
   {
     code: 93341,
@@ -1014,7 +1014,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 93667,
@@ -1048,7 +1048,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 92128,
@@ -1065,7 +1065,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti limbi straine,Carti cu sunete",
+    categoryType: "Cărți limbi străine,Cărți cu sunete",
   },
   {
     code: 92390,
@@ -1082,7 +1082,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 92117,
@@ -1099,14 +1099,14 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu claviatura",
+    categoryType: "Cărți cu claviatura",
   },
   {
     code: 91904,
     name: "Lift-the-Flap First Sums",
     price: 65,
     description:
-      "With over 50 flaps to lift, this delightful book helps young children learn how to add and take away numbers from zero to ten. Pages show scenes such as a garden, a beach, a bakery and a market with simple arithmetic questions. Children can do the sums then lift up a leaf, a sandcastle or a tray of tasty jam tarts to reveal the answers.",
+      "With over 50 flaps to lift, this delightful book helps young children learn how to add and take away numbers from zero to ten. Pages show scenes such as a garden, a beach, a bakery and a marker with simple arithmetic questions. Children can do the sums then lift up a leaf, a sandcastle or a tray of tasty jam tarts to reveal the answers.",
     category: "5-7,7-9",
     discount: "",
     ytblink: "",
@@ -1116,7 +1116,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 92132,
@@ -1133,7 +1133,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 95302,
@@ -1150,7 +1150,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 95103,
@@ -1167,7 +1167,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 95286,
@@ -1184,7 +1184,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti Pop-up,Carti de fictiune",
+    categoryType: "Cărți Pop-up,Cărți de ficțiune",
   },
   {
     code: 93199,
@@ -1201,7 +1201,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 59817,
@@ -1218,11 +1218,11 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 59825,
-    name: "Silly Sheepdog (FYT First Reading)",
+    name: "silly Sheepdog (FYT First Reading)",
     price: 36,
     description:
       "Ted’s new sheepdog doesn’t seem very well trained, but when a sheep escapes he races into action. This charming story from the Farmyard Tales series has been written especially for children who are learning to read and has simple puzzles to solve at the end.",
@@ -1235,7 +1235,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 59872,
@@ -1252,7 +1252,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Cultura generala",
+    categoryType: "Cultură generală",
   },
   {
     code: 59934,
@@ -1269,7 +1269,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de tehnologie",
+    categoryType: "Cărți de tehnologie",
   },
   {
     code: 90303,
@@ -1286,7 +1286,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 90304,
@@ -1303,7 +1303,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 91555,
@@ -1320,7 +1320,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune,Carti cu clapete",
+    categoryType: "Cărți de ficțiune,Cărți cu clapete",
   },
   {
     code: 91726,
@@ -1337,7 +1337,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 91901,
@@ -1354,7 +1354,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 92726,
@@ -1371,7 +1371,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune,Cultura generala",
+    categoryType: "Cărți de ficțiune,Cultură generală",
   },
   {
     code: 94072,
@@ -1388,7 +1388,7 @@ const products = [
     order: "yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 94106,
@@ -1405,7 +1405,7 @@ const products = [
     order: "no",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti senzoriale,Carti cu clapete",
+    categoryType: "Cărți senzoriale,Cărți cu clapete",
   },
   {
     code: 94162,
@@ -1422,7 +1422,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 97471,
@@ -1439,7 +1439,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 97849,
@@ -1456,7 +1456,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 98120,
@@ -1473,7 +1473,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 98909,
@@ -1490,7 +1490,7 @@ const products = [
     order: "no",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 99226,
@@ -1507,7 +1507,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 59691,
@@ -1524,7 +1524,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti limbi straine",
+    categoryType: "Cărți limbi străine",
   },
   {
     code: 59457,
@@ -1541,7 +1541,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Cultura generala,Carti cu clapete",
+    categoryType: "Cultură generală,Cărți cu clapete",
   },
   {
     code: 59074,
@@ -1558,7 +1558,7 @@ const products = [
     order: "no",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Cultura generala",
+    categoryType: "Cultură generală",
   },
   {
     code: 54057,
@@ -1575,7 +1575,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 95094,
@@ -1592,7 +1592,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 58155,
@@ -1609,7 +1609,7 @@ const products = [
     order: "Yes",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
     code: 59764,
@@ -1626,7 +1626,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 94292,
@@ -1643,10 +1643,10 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
-    code: 9792,
+    code: "09792",
     name: "Lift The Flap Counting Book",
     price: 65,
     description:
@@ -1656,11 +1656,11 @@ const products = [
     ytblink: "",
     rating: "",
     reviews: "",
-    image: "/images/products/9792.jpg",
+    image: "/images/products/09792.jpg",
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 93962,
@@ -1694,7 +1694,7 @@ const products = [
     order: "Yes",
     countInStock: 2,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 56516,
@@ -1711,7 +1711,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 55155,
@@ -1728,7 +1728,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96256,
@@ -1745,7 +1745,7 @@ const products = [
     order: "Yes",
     countInStock: 3,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti de fictiune",
+    categoryType: "Cărți cu sunete,Cărți de ficțiune",
   },
   {
     code: 93714,
@@ -1762,7 +1762,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 97491,
@@ -1779,7 +1779,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti de fictiune",
+    categoryType: "Cărți cu sunete,Cărți de ficțiune",
   },
   {
     code: 58179,
@@ -1796,7 +1796,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu jucarie",
+    categoryType: "Cărți cu jucărie",
   },
   {
     code: 53707,
@@ -1829,7 +1829,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
     code: 95891,
@@ -1846,7 +1846,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 95277,
@@ -1863,7 +1863,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 54971,
@@ -1880,10 +1880,10 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
-    code: 7005,
+    code: "07005",
     name: "See Inside Your Body",
     price: 65,
     description:
@@ -1893,11 +1893,11 @@ const products = [
     ytblink: "https://www.youtube.com/watch?v=voZNyMqLhwk&t=1s",
     rating: "",
     reviews: "",
-    image: "/images/products/7005.jpg",
+    image: "/images/products/07005.jpg",
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu clapete",
+    categoryType: "Cărți cu clapete",
   },
   {
     code: 97671,
@@ -1914,7 +1914,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 93230,
@@ -1931,7 +1931,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 96799,
@@ -1948,7 +1948,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 91900,
@@ -1965,7 +1965,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 96825,
@@ -1982,7 +1982,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96947,
@@ -2016,14 +2016,14 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 97490,
     name: "Farm Animals Magic Painting P&S FYT",
     price: 36,
     description:
-      "Brush water over the black and white illustrations and watch as the animals of Apple Tree Farm burst into colour! Sixteen detailed pictures include Poppy and Sam feeding the chickens, pigs playing in a pigsty, cows sleeping under a starry sky and lots more. With a handy fold-out back cover to prevent colours running through to the page beneath.",
+      "Brush water over the black and white illustrations and watch as the animals of Apple Tree Farm burst into colour! sixteen detailed pictures include Poppy and Sam feeding the chickens, pigs playing in a pigsty, cows sleeping under a starry sky and lots more. With a handy fold-out back cover to prevent colours running through to the page beneath.",
     category: "1-3,3-5",
     discount: "",
     ytblink: "https://www.youtube.com/watch?v=w1UjFBtB_HII",
@@ -2033,7 +2033,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 98677,
@@ -2050,7 +2050,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti senzoriale,Board books",
+    categoryType: "Cărți senzoriale,Board books",
   },
   {
     code: 59769,
@@ -2067,7 +2067,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: "N4331",
@@ -2084,7 +2084,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti senzoriale",
+    categoryType: "Cărți senzoriale",
   },
   {
     code: 55181,
@@ -2100,7 +2100,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 94850,
@@ -2117,7 +2117,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 58243,
@@ -2134,7 +2134,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 59747,
@@ -2151,7 +2151,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96929,
@@ -2168,7 +2168,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu activitati",
+    categoryType: "Cărți cu activități",
   },
   {
     code: 58122,
@@ -2185,7 +2185,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Kit-uri de cusut si construit",
+    categoryType: "Kit-uri de cusut și construit",
   },
   {
     code: 95754,
@@ -2202,7 +2202,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Kit-uri de cusut si construit",
+    categoryType: "Kit-uri de cusut și construit",
   },
   {
     code: 95753,
@@ -2219,7 +2219,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 96871,
@@ -2236,7 +2236,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu sunete,Carti senzoriale",
+    categoryType: "Cărți cu sunete,Cărți senzoriale",
   },
   {
     code: 98215,
@@ -2253,14 +2253,14 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu sunete",
+    categoryType: "Cărți cu sunete",
   },
   {
     code: 96781,
     name: "Magic Painting Mermaids",
     price: 36,
     description:
-      "Brush water over the black and white illustrations and watch as the magical mermaid scenes burst into colour! Sixteen detailed pictures include a mermaid princess, mermaids relaxing on a beach, playing with dolphins and lots more. With a handy fold-out back cover to prevent colours running through to the page beneath.",
+      "Brush water over the black and white illustrations and watch as the magical mermaid scenes burst into colour! sixteen detailed pictures include a mermaid princess, mermaids relaxing on a beach, playing with dolphins and lots more. With a handy fold-out back cover to prevent colours running through to the page beneath.",
     category: "1-3,3-5",
     discount: "",
     ytblink: "",
@@ -2270,14 +2270,14 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 97081,
     name: "Woodland Magic Painting",
     price: 36,
     description:
-      "Bring the woodland to life as you brush water over the black and white illustrations in this beautiful book. Sixteen detailed pictures include harvest mice eating berries, brown bears climbing trees, a badger exploring at night and lots more. With a handy fold-out back cover to prevent colours running through to the page beneath.",
+      "Bring the woodland to life as you brush water over the black and white illustrations in this beautiful book. sixteen detailed pictures include harvest mice eating berries, brown bears climbing trees, a badger exploring at night and lots more. With a handy fold-out back cover to prevent colours running through to the page beneath.",
     category: "1-3,3-5",
     discount: "",
     ytblink: "",
@@ -2287,7 +2287,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de pictat si desenat si colorat",
+    categoryType: "Cărți de pictat",
   },
   {
     code: 95682,
@@ -2304,7 +2304,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu jucarie",
+    categoryType: "Cărți cu jucărie",
   },
   {
     code: 93706,
@@ -2321,7 +2321,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 58434,
@@ -2338,7 +2338,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu marker",
+    categoryType: "Cărți cu marker",
   },
   {
     code: 95071,
@@ -2355,7 +2355,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti de tehnologie",
+    categoryType: "Cărți de tehnologie",
   },
   {
     code: 95129,
@@ -2372,7 +2372,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 95224,
@@ -2389,7 +2389,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 95225,
@@ -2406,7 +2406,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 95128,
@@ -2423,7 +2423,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 59532,
@@ -2440,7 +2440,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 90369,
@@ -2457,7 +2457,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 94234,
@@ -2474,7 +2474,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 93340,
@@ -2491,7 +2491,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 98117,
@@ -2508,7 +2508,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96000,
@@ -2525,7 +2525,7 @@ const products = [
     order: "Yes",
     countInStock: 0,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 96228,
@@ -2542,7 +2542,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 55154,
@@ -2559,7 +2559,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti cu stickere si transfer",
+    categoryType: "Cărți cu stickere și transfer",
   },
   {
     code: 95872,
@@ -2576,7 +2576,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Carti de fictiune",
+    categoryType: "Cărți de ficțiune",
   },
   {
     code: 56449,
@@ -2593,8 +2593,7 @@ const products = [
     order: "Yes",
     countInStock: 1,
     orderCount: 0,
-    categoryType: "Pad-uri cu activitati",
+    categoryType: "Pad-uri cu activități",
   },
 ];
-
 export default products;

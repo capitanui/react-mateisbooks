@@ -67,6 +67,7 @@ export const productUpdateFilterReducer = (
     category: "-",
     inStock: false,
     comingSoon: false,
+    typeOfBookFilter: [],
   },
   action
 ) => {
@@ -76,6 +77,7 @@ export const productUpdateFilterReducer = (
         category: action.payload.category,
         inStock: action.payload.inStock,
         comingSoon: action.payload.comingSoon,
+        typeOfBookFilter: action.payload.typeOfBookFilter,
       };
 
     default:

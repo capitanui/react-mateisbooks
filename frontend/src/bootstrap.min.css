@@ -2076,6 +2076,7 @@ textarea.form-control {
   position: absolute;
   margin-top: 0.3rem;
   margin-left: -1.25rem;
+  cursor: pointer;
 }
 .form-check-input:disabled ~ .form-check-label,
 .form-check-input[disabled] ~ .form-check-label {
@@ -2083,6 +2084,7 @@ textarea.form-control {
 }
 .form-check-label {
   margin-bottom: 0;
+  cursor: pointer;
 }
 .form-check-inline {
   display: -ms-inline-flexbox;
@@ -3552,6 +3554,7 @@ input[type="submit"].btn-block {
   width: 1rem;
   height: 1.25rem;
   opacity: 0;
+  cursor: pointer;
 }
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
@@ -3581,6 +3584,7 @@ input[type="submit"].btn-block {
   position: relative;
   margin-bottom: 0;
   vertical-align: top;
+  cursor: pointer;
 }
 .custom-control-label::before {
   position: absolute;

@@ -20,7 +20,23 @@ const Filters = () => {
   const dispatch = useDispatch();
 
   const productFilters = useSelector((state) => state.productFilters);
-  const { inStock, comingSoon } = productFilters;
+  const productList = useSelector((state) => state.productList);
+
+  const { inStock, comingSoon, typeOfBookFilter } = productFilters;
+  const { typeOfBookCategories } = productList;
+
+  function updateFilterTypeOfBooks(e) {
+    let index = typeOfBookFilter.indexOf(e.target.id);
+
+    if (index > -1) typeOfBookFilter.splice(index, 1);
+    else typeOfBookFilter.push(e.target.id);
+
+    dispatch(updateProductFilters({ typeOfBookFilter }));
+  }
+
+  function isChecked(typeOfBook) {
+    return typeOfBookFilter.includes(typeOfBook);
+  }
 
   return (
     <>
@@ -55,50 +71,21 @@ const Filters = () => {
           </ListGroup>
         </Card.Body>
         <Card.Header style={{ backgroundColor: "#6fda9f" }}>
-          <div style={textStyle.titleTipCarte}>TIP DE CARTE</div>
+          <div style={textStyle.titleTipCarte}>CATEGORII</div>
         </Card.Header>
         <Card.Body>
           <ListGroup variant="flush">
-            <ListGroup.Item className="border-0">
-              <Form.Check type="checkbox" id="todo">
-                <Form.Check.Input type="checkbox" isValid />
-                <Form.Check.Label style={textStyle.tipCarteStyle}>
-                  Cărți cu clapete
-                </Form.Check.Label>
-              </Form.Check>
-            </ListGroup.Item>
-            <ListGroup.Item className="border-0">
-              <Form.Check type="checkbox" id="todo">
-                <Form.Check.Input type="checkbox" isValid />
-                <Form.Check.Label style={textStyle.tipCarteStyle}>
-                  Cărți cu sunete
-                </Form.Check.Label>
-              </Form.Check>
-            </ListGroup.Item>
-            <ListGroup.Item className="border-0">
-              <Form.Check type="checkbox" id="todo">
-                <Form.Check.Input type="checkbox" isValid />
-                <Form.Check.Label style={textStyle.tipCarteStyle}>
-                  Cărți cu activități
-                </Form.Check.Label>
-              </Form.Check>
-            </ListGroup.Item>
-            <ListGroup.Item className="border-0">
-              <Form.Check type="checkbox" id="todo">
-                <Form.Check.Input type="checkbox" isValid />
-                <Form.Check.Label style={textStyle.tipCarteStyle}>
-                  Cărți de colorat
-                </Form.Check.Label>
-              </Form.Check>
-            </ListGroup.Item>
-            <ListGroup.Item className="border-0">
-              <Form.Check type="checkbox" id="todo">
-                <Form.Check.Input type="checkbox" isValid />
-                <Form.Check.Label style={textStyle.tipCarteStyle}>
-                  Cărți senzoriale
-                </Form.Check.Label>
-              </Form.Check>
-            </ListGroup.Item>
+            {typeOfBookCategories.map((typeOfBook) => (
+              <ListGroup.Item className="border-0">
+                <Form.Check
+                  type="checkbox"
+                  id={typeOfBook}
+                  label={<div>{typeOfBook}</div>}
+                  onChange={updateFilterTypeOfBooks}
+                  defaultChecked={isChecked(typeOfBook)}
+                ></Form.Check>
+              </ListGroup.Item>
+            ))}
           </ListGroup>
         </Card.Body>
       </Card>
