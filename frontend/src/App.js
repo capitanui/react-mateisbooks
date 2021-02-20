@@ -26,7 +26,7 @@ const App = () => {
         <TopHeader />
         <Navigation />
         <Route path="/" component={Home} exact />
-        <Route path="/catalog" component={Catalog} exact />
+        <Route path="/catalog" component={Catalog} />
         <Route path="/product/:id" component={ProductPage} />
         <Route path="/favorites/:id?" component={Favorites} />
         <Route path="/reviews" component={InWork} />

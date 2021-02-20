@@ -4,7 +4,7 @@ import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
 import Divider from "./Divider";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Row, Col, Button, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { updateProductFilters } from "../actions/productActions";
 import "../roundButton.css";
 

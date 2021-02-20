@@ -1,10 +1,59 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Row, Col, Image } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
+import { useDispatch } from "react-redux";
+import { updateProductFilters } from "../actions/productActions";
+
 import "../styles/homeimagecategories.css";
 
 const HomeImageCategories = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 996px)" });
+
+  const dispatch = useDispatch();
+
+  // Type of book categories group filters
+  const homeschooling = [
+    "Cărți cu clapete",
+    "Cărți cu marker",
+    "Cărți cu stickere și transfer",
+    "Cărți limbi străine",
+    "Cărți cu claviatura",
+    "Set puzzle + carte",
+    "Kit-uri de cusut și construit",
+    "Cultură generală",
+    "Cărți de tehnologie",
+    "Hobbies",
+    "Matching games",
+  ];
+
+  const activitati = [
+    "Cărți cu clapete",
+    "Cărți cu claviatura",
+    "Cărți senzoriale",
+    "Cărți de pictat",
+    "Cărți cu marker",
+    "Board books",
+    "Cărți cu jucărie",
+    "Set puzzle + carte",
+    "Cărți cu stickere și transfer",
+    "Kit-uri de cusut și construit",
+    "Crăciun",
+    "Cultură generală",
+    "Hobbies",
+    "Matching games",
+  ];
+
+  const sunete = ["Cărți cu sunete", "Cărți cu claviatura", "Crăciun"];
+
+  const texturi = ["Cărți senzoriale", "Crăciun", "Cărți Pop-up"];
+
+  const fictiune = [
+    "Board books",
+    "Crăciun",
+    "Cărți de ficțiune",
+    "Cărți Pop-up",
+  ];
 
   return (
     <div
@@ -29,7 +78,16 @@ const HomeImageCategories = () => {
                 />
               )}
               <div class="category-button">
-                <a href="/catalog">HOME SCHOOLING</a>
+                <Link
+                  to="/catalog"
+                  onClick={() =>
+                    dispatch(
+                      updateProductFilters({ typeOfBookFilter: homeschooling })
+                    )
+                  }
+                >
+                  HOME SCHOOLING
+                </Link>
               </div>
             </figure>
           </div>
@@ -43,7 +101,14 @@ const HomeImageCategories = () => {
                 className="my-2 mx-auto"
               />
               <div class="category-button">
-                <a href="/catalog">SUNETE</a>
+                <Link
+                  to="/catalog"
+                  onClick={() =>
+                    dispatch(updateProductFilters({ typeOfBookFilter: sunete }))
+                  }
+                >
+                  SUNETE
+                </Link>
               </div>
             </figure>
           </div>
@@ -55,7 +120,16 @@ const HomeImageCategories = () => {
                 className="my-4 mx-auto"
               />
               <div class="category-button">
-                <a href="/catalog">FICTIUNE</a>
+                <Link
+                  to="/catalog"
+                  onClick={() =>
+                    dispatch(
+                      updateProductFilters({ typeOfBookFilter: fictiune })
+                    )
+                  }
+                >
+                  FICTIUNE
+                </Link>
               </div>
             </figure>
           </div>
@@ -69,7 +143,16 @@ const HomeImageCategories = () => {
                 className="my-2"
               />
               <div class="category-button">
-                <a href="/catalog">TEXTURI</a>
+                <Link
+                  to="/catalog"
+                  onClick={() =>
+                    dispatch(
+                      updateProductFilters({ typeOfBookFilter: texturi })
+                    )
+                  }
+                >
+                  TEXTURI
+                </Link>
               </div>
             </figure>
           </div>
@@ -81,7 +164,16 @@ const HomeImageCategories = () => {
                 className="my-4"
               />
               <div class="category-button">
-                <a href="/catalog">ACTIVITÃTI</a>
+                <Link
+                  to="/catalog"
+                  onClick={() =>
+                    dispatch(
+                      updateProductFilters({ typeOfBookFilter: activitati })
+                    )
+                  }
+                >
+                  ACTIVITÃTI
+                </Link>
               </div>
             </figure>
           </div>

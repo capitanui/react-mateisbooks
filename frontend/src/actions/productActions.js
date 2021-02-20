@@ -132,7 +132,7 @@ export const applyProductFilters = () => async (dispatch, getState) => {
       type: PRODUCT_FILTER_REQUEST,
     });
 
-    const { productFilters, productList, productListFiltered } = getState();
+    const { productFilters, productList } = getState();
     const { category, inStock, comingSoon, typeOfBookFilter } = productFilters;
     let { products } = productList;
 

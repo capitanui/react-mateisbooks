@@ -1,22 +1,9 @@
 import React from "react";
-import { Form, ListGroup, Card } from "react-bootstrap";
+import { Form, ListGroup, Card, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProductFilters } from "../actions/productActions";
 
-const Filters = () => {
-  const textStyle = {
-    tipCarteStyle: {
-      fontSize: "1rem",
-      whiteSpace: "nowrap",
-    },
-    titleTipCarte: {
-      padding: "0",
-      margin: "0",
-      fontSize: "1.2rem",
-      color: "white",
-    },
-  };
-
+export const Filters = () => {
   const dispatch = useDispatch();
 
   const productFilters = useSelector((state) => state.productFilters);
@@ -38,8 +25,17 @@ const Filters = () => {
     return typeOfBookFilter.includes(typeOfBook);
   }
 
+  const textStyle = {
+    titleTipCarte: {
+      padding: "0",
+      margin: "0",
+      fontSize: "1.2rem",
+      color: "white",
+    },
+  };
+
   return (
-    <>
+    <Container>
       <Card border="success" style={{ marginTop: "130px" }}>
         <Card.Header style={{ backgroundColor: "#6fda9f" }}>
           <div style={textStyle.titleTipCarte}>STOC</div>
@@ -80,16 +76,27 @@ const Filters = () => {
                 <Form.Check
                   type="checkbox"
                   id={typeOfBook}
-                  label={<div>{typeOfBook}</div>}
+                  label={
+                    <div
+                      style={{
+                        fontFamily: "latoregular, Helvetica, Arial, sans-serif",
+                        whiteSpace: "nowrap",
+                        fontSize: "1rem",
+                      }}
+                    >
+                      {typeOfBook}
+                    </div>
+                  }
                   onChange={updateFilterTypeOfBooks}
-                  defaultChecked={isChecked(typeOfBook)}
+                  checked={isChecked(typeOfBook)}
                 ></Form.Check>
               </ListGroup.Item>
             ))}
           </ListGroup>
         </Card.Body>
       </Card>
-    </>
+    </Container>
   );
 };
+
 export default Filters;

@@ -1,0 +1,45 @@
+div.selected-filter-group {
+  display: inline-block;
+  border: solid 1px #e7e7e7;
+  border-radius: 28px;
+  margin-top: 2px;
+}
+
+div.selected-filter-group ul li:first-child {
+  padding-left: 0;
+}
+div.selected-filter-group ul li {
+  display: inline;
+  list-style-type: none;
+  font-family: "latoregular", "Helvetica", Arial, sans-serif;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+div.selected-filter-group ul li span.ws-filter-name {
+  color: #a1a1a1;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+div.selected-filter-group ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 13px;
+  margin-right: 13px;
+  padding: 0;
+}
+
+div.selected-filter-group ul li a.ws-clear-filter-link {
+  color: #a1a1a1;
+}
+div.selected-filter-group ul li span.ws-filter-value {
+  font-weight: bold;
+}

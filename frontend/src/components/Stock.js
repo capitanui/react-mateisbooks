@@ -5,6 +5,8 @@ import Product from "../components/Product.js";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
 
+import "../styles/selectedfilters.css";
+
 const Stock = () => {
   const productListFiltered = useSelector((state) => state.productListFiltered);
   const productFilters = useSelector((state) => state.productFilters);
@@ -21,7 +23,7 @@ const Stock = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <Container>
-          <Row className="justify-content-right mx-1">
+          <Row className="justify-content-right mx-1 my-3">
             <div
               style={{
                 fontFamily: "latoblack",
