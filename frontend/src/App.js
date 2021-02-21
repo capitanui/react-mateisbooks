@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import TopHeader from "./components/TopHeader";
 import Navigation from "./components/Navigation";
+import FacebookMessengerChat from "./components/FacebookMessengerChat";
 import Catalog from "./screens/Catalog";
 import Home from "./screens/Home";
 import ProductPage from "./screens/ProductPage";
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/voucher" component={InWork} />
         <Route path="/contact" component={InWork} />
         <Route path="/contultau" component={InWork} />
+        <FacebookMessengerChat />
         <Footer />
       </Router>
     </Container>

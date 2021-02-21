@@ -30,11 +30,11 @@ const Catalog = () => {
         <Container>
           <Row>
             <Media query="(min-width: 1250px)">
-              <Col md={2}>
+              <Col md={3}>
                 <Filters />
               </Col>
             </Media>
-            <Col md={10}>
+            <Col md={9}>
               <Categories />
               <FiltersSelected />
               <Stock />
