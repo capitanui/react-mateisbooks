@@ -145,7 +145,7 @@ const ProductPage = ({ history, match }) => {
                                 fontSize: "1.4rem",
                               }}
                             >
-                              <i class="far fa-times-circle"></i> INDISPONIBIL
+                              <i class="far fa-times-circle"></i> PE COMANDÃ
                             </div>
                           )}
                         </Col>
@@ -205,7 +205,6 @@ const ProductPage = ({ history, match }) => {
                     Descriere
                   </div>
                 </ListGroup.Item>
-
                 <ListGroup.Item>
                   <Col md={6}>
                     <small className="font-weight-light">

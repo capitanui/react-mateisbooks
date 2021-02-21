@@ -13,7 +13,7 @@ const ProductPrice = ({ product, size }) => {
       fontFamily: '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
       textDecoration: "line-through",
       color: "#ccc",
-      fontSize: "13px",
+      fontSize: "1rem",
     },
     noDiscountStyle: {
       fontFamily: '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
@@ -36,13 +36,28 @@ const ProductPrice = ({ product, size }) => {
         }
       >
         <span
-          style={size === "large" ? textStyle.largeSize : textStyle.normalSize}
+          style={
+            !hasDiscount && size === "large"
+              ? textStyle.largeSize
+              : textStyle.normalSize
+          }
         >
+          {" "}
           {fullPrice} lei{" "}
         </span>
       </div>
       <div style={textStyle.noDiscountStyle}>
-        {hasDiscount ? `${discountPrice} lei` : ""}
+        {hasDiscount ? (
+          <span
+            style={
+              size === "large" ? textStyle.largeSize : textStyle.normalSize
+            }
+          >
+            {discountPrice} lei
+          </span>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
