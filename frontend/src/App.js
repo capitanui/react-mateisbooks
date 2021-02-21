@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/voucher" component={InWork} />
         <Route path="/contact" component={InWork} />
         <Route path="/contultau" component={InWork} />
-        {/* <FacebookMessengerChat /> */}
+        <FacebookMessengerChat />
         <Footer />
       </Router>
     </Container>

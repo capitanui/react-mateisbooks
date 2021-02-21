@@ -1,15 +1,15 @@
-import React from "react";
-import MessengerSendToMessenger from "react-messenger-send-to-messenger";
+import React, { Component } from "react";
+import { FacebookProvider, SendToMessenger } from "react-facebook";
 
-const FacebookSendToMessenger = () => {
-  return (
-    <div>
-      <MessengerSendToMessenger
-        pageId="512114519309523"
-        appId="188699816368668"
-      />
-    </div>
-  );
-};
-
-export default FacebookSendToMessenger;
+export default class Example extends Component {
+  render() {
+    return (
+      <FacebookProvider appId="188699816368668">
+        <SendToMessenger
+          messengerAppId="188699816368668"
+          pageId="512114519309523"
+        />
+      </FacebookProvider>
+    );
+  }
+}
