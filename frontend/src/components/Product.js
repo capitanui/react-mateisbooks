@@ -45,7 +45,7 @@ const Product = ({ product }) => {
         </Card.Text>
         <Card.Text as="div">
           <div className="my-2 mx-2">
-            <ProductPrice product={product} />
+            <ProductPrice product={product} size="normal" />
           </div>
         </Card.Text>
         {favoritesItems.find((p) => p.product === product.code) ? (

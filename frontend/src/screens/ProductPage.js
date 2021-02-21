@@ -5,6 +5,7 @@ import { Container, Row, Col, ListGroup, Image, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import DiscountTag from "../components/DiscountTag";
 import ProductPrice from "../components/ProductPrice";
+import FacebookSendToMessenger from "../components/FacebookSendToMessenger";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
 import { listProductDetails } from "../actions/productActions";
@@ -46,65 +47,149 @@ const ProductPage = ({ history, match }) => {
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md={3}>
+            <Col md={6}>
               <ListGroup variant="flush">
                 <ListGroup.Item className="border-0">
                   <div
                     style={{
                       fontFamily: "latoblack",
-                      fontSize: "25px",
+                      fontSize: "2rem ",
                       textTransform: "capitalize",
                     }}
                   >
                     {product.name}
                   </div>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="d-flex flex-row justify-content-between">
+                  <div>
+                    <a
+                      href={product.ytblink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mr-3"
+                    >
+                      <img
+                        src="/images/youtube.png"
+                        alt="ytblink"
+                        width="40"
+                        height="31"
+                      />
+                    </a>
+                    <span
+                      style={{
+                        fontFamily: "latoblack",
+                        fontSize: "1rem",
+                        textTransform: "none",
+                      }}
+                    >
+                      Vezi pe Youtube
+                    </span>
+                  </div>
                   <Rating
+                    className="ml-3"
                     value={product.rating}
                     text={`${product.reviews > 0 ? product.review : 0} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item className="border-0">
+                <ListGroup.Item className="border-0 my-4">
                   <Row>
                     <Col>
-                      <ProductPrice product={product} />
+                      <span
+                        style={{
+                          fontFamily: "latolight",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        Vârsta:
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "latoblack",
+                          fontSize: "1.5rem",
+                          letterSpacing: "0.03rem",
+                        }}
+                      >
+                        {" "}
+                        {product.category}
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: "latolight",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        {" "}
+                        ani
+                      </span>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <ListGroup.Item className="border-0 my-4">
+                      <Row>
+                        <Col>
+                          {product.countInStock > 0 ? (
+                            <div
+                              style={{
+                                fontFamily: "latolight",
+                                fontSize: "1.4rem",
+                                color: "green",
+                              }}
+                            >
+                              <i class="far fa-check-circle"></i>{" "}
+                              <span> IN STOC</span>
+                            </div>
+                          ) : (
+                            <div
+                              style={{
+                                fontFamily: "latolight",
+                                fontSize: "1.4rem",
+                              }}
+                            >
+                              <i class="far fa-times-circle"></i> INDISPONIBIL
+                            </div>
+                          )}
+                        </Col>
+                      </Row>
+                    </ListGroup.Item>
+                  </Row>
+                  <Row className="d-flex align-items-center">
+                    <Col md={6}>
+                      <ProductPrice product={product} size="large" />{" "}
+                    </Col>
+                    <Col md={6}>
+                      <ListGroup.Item className="border-0">
+                        <Button
+                          onClick={addToFavoritesHandler}
+                          className="btn-block"
+                          type="button"
+                          disabled={product.countInStock === 0}
+                        >
+                          <span>
+                            <i className="fas fa-heart mr-3"></i>
+                          </span>
+                          Adauga la favorite
+                        </Button>
+                      </ListGroup.Item>
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item className="border-0 my-1">
-                  <Row>
-                    <Col>
-                      {product.countInStock > 0 ? (
-                        <div style={{ color: "green" }}>
-                          <small className="font-weight-light">In stoc</small>
-                        </div>
-                      ) : (
-                        <div style={{ color: "red" }}>
-                          <small className="font-weight-light">
-                            Nu este in stoc
-                          </small>
-                        </div>
-                      )}
-                    </Col>
-                  </Row>
-                </ListGroup.Item>
-                <ListGroup.Item className="border-0">
-                  <Button
-                    onClick={addToFavoritesHandler}
-                    className="btn-block"
-                    type="button"
-                    disabled={product.countInStock === 0}
+                <ListGroup.Item>
+                  <span
+                    style={{
+                      fontFamily: "latolight",
+                      fontSize: "1.5rem",
+                    }}
                   >
-                    <span>
-                      <i className="fas fa-heart mr-3"></i>
-                    </span>
-                    Adauga la favorite
-                  </Button>
+                    <i className="fas fa-gift mr-3"></i>
+                    Împachetare cadou disponibilã
+                  </span>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <div id="demo">TEST MESSENGER</div>
+                  <FacebookSendToMessenger />
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md={3}>{""}</Col>
           </Row>
           <Row>
             <Col md={12}>
@@ -127,30 +212,6 @@ const ProductPage = ({ history, match }) => {
                       {product.description}
                     </small>
                   </Col>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <div
-                    classs="mt-auto py-5"
-                    style={{
-                      fontFamily: "latoblack",
-                      fontSize: "14px",
-                      textTransform: "none",
-                    }}
-                  >
-                    Vezi pe Youtube
-                  </div>
-                  <a
-                    href={product.ytblink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="/images/youtube.png"
-                      alt="ytblink"
-                      width="40"
-                      height="31"
-                    />
-                  </a>
                 </ListGroup.Item>
               </ListGroup>
             </Col>

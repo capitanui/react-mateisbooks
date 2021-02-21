@@ -55,7 +55,7 @@ const TopHeader = () => {
           <Col className="mr-auto">
             <i className="fas fa-envelope mr-1 ">
               <span className="ml-1 text-nowrap" style={textStyle}>
-                anca.capitanu@cartileluimatei.ro
+                anca@cartileluimatei.ro
               </span>
             </i>
           </Col>

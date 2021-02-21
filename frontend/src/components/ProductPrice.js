@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductPrice = ({ product }) => {
+const ProductPrice = ({ product, size }) => {
   let hasDiscount = product.discount > 0;
   let fullPrice = product.price;
   let discountPrice = (
@@ -8,36 +8,40 @@ const ProductPrice = ({ product }) => {
     (product.price * product.discount) / 100
   ).toFixed(2);
 
+  const textStyle = {
+    discountStyle: {
+      fontFamily: '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
+      textDecoration: "line-through",
+      color: "#ccc",
+      fontSize: "13px",
+    },
+    noDiscountStyle: {
+      fontFamily: '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
+      color: "#ff8152",
+      fontSize: "18px",
+    },
+    normalSize: {
+      fontSize: "1.5rem",
+    },
+    largeSize: {
+      fontSize: "2.5rem",
+    },
+  };
+
   return (
     <div class="mt-0">
       <div
         style={
-          hasDiscount
-            ? {
-                fontFamily:
-                  '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
-                textDecoration: "line-through",
-                color: "#ccc",
-                fontSize: "13px",
-              }
-            : {
-                fontFamily:
-                  '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
-                color: "#ff8152",
-                fontSize: "18px",
-              }
+          hasDiscount ? textStyle.discountStyle : textStyle.noDiscountStyle
         }
       >
-        {fullPrice} lei
+        <span
+          style={size === "large" ? textStyle.largeSize : textStyle.normalSize}
+        >
+          {fullPrice} lei{" "}
+        </span>
       </div>
-      <div
-        style={{
-          fontFamily:
-            '"latoblack","Helvetica Neue","Helvetica,Arial,sans-serif"',
-          color: "#ff8152",
-          fontSize: "18px",
-        }}
-      >
+      <div style={textStyle.noDiscountStyle}>
         {hasDiscount ? `${discountPrice} lei` : ""}
       </div>
     </div>
