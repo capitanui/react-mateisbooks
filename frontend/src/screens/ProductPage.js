@@ -180,7 +180,13 @@ const ProductPage = ({ history, match }) => {
                       fontSize: "1.5rem",
                     }}
                   >
-                    <i className="fas fa-gift mr-3"></i>
+                    <img
+                      src="/images/gift.png"
+                      alt="cadou"
+                      width="40rem"
+                      height="40rem"
+                      class="mx-2"
+                    />
                     Împachetare cadou disponibilã
                   </span>
                 </ListGroup.Item>
