@@ -9,7 +9,8 @@ const FacebookMessengerChat = () => {
         appId="188699816368668"
         htmlRef={window.location.pathname}
         shouldShowDialog="true"
-        loggedInGreeting="Discuta cu Anca"
+        minimized="True"
+        loggedInGreeting="Discută cu Anca, consultantul tău Usborne, pentu a primi cele mai potrivite recomandări de cărți pentru copilul tău !"
       />
     </div>
   );
