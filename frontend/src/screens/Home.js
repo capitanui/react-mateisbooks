@@ -9,7 +9,7 @@ const Home = () => {
     <div className="my-3 px-0">
       <Divider />
       <HomeImageCarousel />
-      {/* <HomeImageIcons /> */}
+      <HomeImageIcons />
       <HomeImageCategories />
     </div>
   );

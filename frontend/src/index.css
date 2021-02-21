@@ -72,3 +72,9 @@ ul {
   font-family: "latolight";
   src: local("Lato-Light"), url(./fonts/Lato-Light.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "rocknroll";
+  src: local("RocknRollOne-Regular"),
+    url(./fonts/RocknRollOne-Regular.ttf) format("truetype");
+}

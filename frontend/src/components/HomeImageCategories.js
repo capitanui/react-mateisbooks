@@ -56,10 +56,8 @@ const HomeImageCategories = () => {
   ];
 
   return (
-    <div
-      class="container fluid pl-4 py-4 pr-4"
-      style={{ background: "#6fda9f" }}
-    >
+    <div class="container fluid pl-4 py-4 pr-4">
+      {/* style={{ background: "#6fda9f" }} */}
       <Row>
         <Col md={4}>
           <div class="hovercategories">
