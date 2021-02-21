@@ -10,7 +10,6 @@ const FacebookMessengerChat = () => {
         htmlRef={window.location.pathname}
         shouldShowDialog={true}
         loggedInGreeting="Discută cu Anca, consultantul tău Usborne !"
-        language="ro"
       />
     </div>
   );

@@ -190,10 +190,7 @@ const ProductPage = ({ history, match }) => {
                     Împachetare cadou disponibilã
                   </span>
                 </ListGroup.Item>
-                <ListGroup.Item>
-                  <div id="demo">TEST MESSENGER</div>
-                  <FacebookSendToMessenger />
-                </ListGroup.Item>
+                <FacebookSendToMessenger />
               </ListGroup>
             </Col>
           </Row>
