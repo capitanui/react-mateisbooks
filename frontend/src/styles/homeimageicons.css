@@ -1,32 +1,32 @@
 .rectangle {
-  width: 42vh;
-  height: 23vh;
+  width: 20vw;
+  height: 12vw;
   background-color: #f4f4f4;
   text-align: center;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-decoration: solid;
 }
 
 .title {
   font-family: "rocknroll";
-  font-size: 2.4vmin;
+  font-size: 1.2vw;
   letter-spacing: 1px;
   color: #000000;
 }
 
 .body {
   font-family: "rocknroll";
-  font-size: 1.48vmin;
+  font-size: 0.7vw;
   letter-spacing: 1px;
   margin-top: 15px;
   text-align: left;
   margin-left: 15px;
-  color: #3f3d3d;
+  color: #747070;
 }
 
 .icon {
-  font-size: 7vmin;
+  font-size: 2.7vw;
   letter-spacing: 1px;
   color: #ff8152;
   margin-top: 3px;
@@ -59,5 +59,35 @@
   40%,
   60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media (max-width: 996px) {
+  .rectangle {
+    width: 80vw;
+    height: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-family: "rocknroll";
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    color: #000000;
+  }
+  .body {
+    font-family: "rocknroll";
+    font-size: 1.8vw;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    text-align: left;
+    margin-left: 15px;
+    color: #747070;
+  }
+  .icon {
+    font-size: 5.7vw;
+    letter-spacing: 1px;
+    color: #ff8152;
+    margin-top: 3px;
   }
 }
