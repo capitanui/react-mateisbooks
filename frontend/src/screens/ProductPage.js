@@ -97,7 +97,7 @@ const ProductPage = ({ history, match }) => {
                       <span
                         style={{
                           fontFamily: "latolight",
-                          fontSize: "1.5rem",
+                          fontSize: "1.3rem",
                         }}
                       >
                         Vârsta:
@@ -105,7 +105,7 @@ const ProductPage = ({ history, match }) => {
                       <span
                         style={{
                           fontFamily: "latoblack",
-                          fontSize: "1.5rem",
+                          fontSize: "1.3rem",
                           letterSpacing: "0.03rem",
                         }}
                       >
@@ -115,7 +115,7 @@ const ProductPage = ({ history, match }) => {
                       <span
                         style={{
                           fontFamily: "latolight",
-                          fontSize: "1.5rem",
+                          fontSize: "1.3rem",
                         }}
                       >
                         {" "}
@@ -131,7 +131,7 @@ const ProductPage = ({ history, match }) => {
                             <div
                               style={{
                                 fontFamily: "latolight",
-                                fontSize: "1.4rem",
+                                fontSize: "1.2rem",
                                 color: "green",
                               }}
                             >
@@ -142,7 +142,7 @@ const ProductPage = ({ history, match }) => {
                             <div
                               style={{
                                 fontFamily: "latolight",
-                                fontSize: "1.4rem",
+                                fontSize: "1.2rem",
                               }}
                             >
                               <i class="far fa-times-circle"></i> PE COMANDÃ
@@ -177,7 +177,7 @@ const ProductPage = ({ history, match }) => {
                   <span
                     style={{
                       fontFamily: "latolight",
-                      fontSize: "1.5rem",
+                      fontSize: "1.2rem",
                     }}
                   >
                     <img
@@ -191,7 +191,6 @@ const ProductPage = ({ history, match }) => {
                   </span>
                 </ListGroup.Item>
               </ListGroup>
-              <FacebookSendToMessenger />
             </Col>
           </Row>
           <Row>
@@ -201,22 +200,25 @@ const ProductPage = ({ history, match }) => {
                   <div
                     style={{
                       fontFamily: "latoblack",
-                      fontSize: "16px",
+                      fontSize: "1.6rem",
                       textTransform: "none",
                     }}
                   >
                     Descriere
                   </div>
                 </ListGroup.Item>
-                <ListGroup.Item>
-                  <Col md={6}>
-                    <small className="font-weight-light">
-                      {product.description}
-                    </small>
-                  </Col>
-                </ListGroup.Item>
               </ListGroup>
             </Col>
+          </Row>
+          <Row
+            className="ml-3"
+            style={{
+              fontFamily: "latolight",
+              fontSize: "1.3rem",
+              textTransform: "none",
+            }}
+          >
+            <span>{product.description}</span>
           </Row>
         </Container>
       )}

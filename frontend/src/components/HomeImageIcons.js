@@ -70,7 +70,7 @@ const HomeImageIcons = () => {
               <br />
               Reduceri la comenzi mari
               <br />
-              Comunitatea mamicilor
+              Comunitatea mamicilor cliente
             </div>
           </div>
         </Col>

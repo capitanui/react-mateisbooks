@@ -8,6 +8,7 @@ import Filters from "../components/Filters.js";
 import Message from "../components/Message.js";
 import Loader from "../components/Loader.js";
 import FiltersSelected from "../components/FiltersSelected.js";
+import FiltersPopover from "../components/FiltersPopover.js";
 import { listProducts } from "../actions/productActions";
 
 const Catalog = () => {
@@ -36,6 +37,11 @@ const Catalog = () => {
             </Media>
             <Col md={9}>
               <Categories />
+              <Media query="(max-width: 1250px)">
+                <Col md={3} className="my-3">
+                  <FiltersPopover />
+                </Col>
+              </Media>
               <FiltersSelected />
               <Stock />
             </Col>

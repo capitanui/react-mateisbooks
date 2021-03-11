@@ -21,7 +21,7 @@ const NavMenu = () => {
               <Nav.Link className="py-3 active">Catalog</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/ourstory" className="mr-3">
-              <Nav.Link className="py-3 active">Povestea Noastrã</Nav.Link>
+              <Nav.Link className="py-3 active">Povestea Mea</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/voucher" className="mr-3">
               <Nav.Link className="py-3 active">Voucher Cadou</Nav.Link>

@@ -66,11 +66,11 @@ const Footer = () => {
                 {" "}
                 Cãrtile Lui Matei
               </span>
-              <br />
+              {/* <br />
               <span style={style.phone}>
                 <i class="fa fa-phone-alt" /> {"  "}0744178638
               </span>
-              <br />
+              <br /> */}
             </Col>
           </Row>
           <Row>

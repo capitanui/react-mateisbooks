@@ -46,11 +46,16 @@ const TopHeader = () => {
           } align-items-center`}
         >
           <Col>
-            <i className="fas fa-phone ml-0 text-nowrap">
+            {/* <i className="fas fa-phone ml-0 text-nowrap">
               <span className="ml-1" style={textStyle}>
                 +4 0744 178 638
               </span>
-            </i>
+            </i> */}
+            <a href="https://www.facebook.com/cartileluimatei">
+              <span className="ml-1" style={textStyle}>
+                <i class="fab fa-facebook" />
+              </span>
+            </a>
           </Col>
           <Col className="mr-auto">
             <i className="fas fa-envelope mr-1 ">
