@@ -14,12 +14,9 @@ const HomeImageCategories = () => {
 
   // Type of book categories group filters
   const homeschooling = [
-    "Cărți cu clapete",
     "Cărți cu marker",
-    "Cărți cu stickere și transfer",
     "Cărți limbi străine",
     "Cărți cu claviatura",
-    "Set puzzle + carte",
     "Kit-uri de cusut și construit",
     "Cultură generală",
     "Cărți de tehnologie",
