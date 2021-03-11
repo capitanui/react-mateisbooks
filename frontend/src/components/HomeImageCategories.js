@@ -35,22 +35,16 @@ const HomeImageCategories = () => {
     "Set puzzle + carte",
     "Cărți cu stickere și transfer",
     "Kit-uri de cusut și construit",
-    "Crăciun",
     "Cultură generală",
     "Hobbies",
     "Matching games",
   ];
 
-  const sunete = ["Cărți cu sunete", "Cărți cu claviatura", "Crăciun"];
+  const sunete = ["Cărți cu sunete", "Cărți cu claviatura"];
 
-  const texturi = ["Cărți senzoriale", "Crăciun", "Cărți Pop-up"];
+  const texturi = ["Cărți senzoriale", "Cărți Pop-up"];
 
-  const fictiune = [
-    "Board books",
-    "Crăciun",
-    "Cărți de ficțiune",
-    "Cărți Pop-up",
-  ];
+  const fictiune = ["Board books", "Cărți de ficțiune", "Cărți Pop-up"];
 
   return (
     <div class="container fluid pl-4 py-4 pr-4">
@@ -91,7 +85,7 @@ const HomeImageCategories = () => {
           <div class="hovercategories">
             <figure>
               <Image
-                src="../images/homepage/homeimagecategories_2.png"
+                src="../images/homepage/homeimagecategories_3.png"
                 fluid
                 className="my-2 mx-auto"
               />
@@ -110,7 +104,7 @@ const HomeImageCategories = () => {
           <div class="hovercategories">
             <figure>
               <Image
-                src="../images/homepage/homeimagecategories_3.png"
+                src="../images/homepage/homeimagecategories_2.png"
                 fluid
                 className="my-4 mx-auto"
               />
